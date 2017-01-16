@@ -10,6 +10,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('app', {
       url: '/',
-      component: 'app'
+      templateUrl: 'app/views/hello/hello.html',
+      controller: 'HelloController as ctrl'
     });
 }
