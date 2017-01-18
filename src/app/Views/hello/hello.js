@@ -1,6 +1,7 @@
 angular
   .module('app')
-  .controller('HelloController', function () {
+  .controller('HelloController', function ($scope,$state) {
     var vm = this;
-    vm.hello = "hello World";
+    vm.hello = "ABSTRACTA";
+    
   });

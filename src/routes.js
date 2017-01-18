@@ -4,13 +4,23 @@ angular
 
 /** @ngInject */
 function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
-  $locationProvider.html5Mode(true).hashPrefix('!');
-  $urlRouterProvider.otherwise('/');
+
 
   $stateProvider
     .state('app', {
       url: '/',
+      abstract: true,
       templateUrl: 'app/views/hello/hello.html',
       controller: 'HelloController as ctrl'
+    })
+    .state('books', {
+      url: '/books',
+      views: {
+        'menuBooks': {
+          templateUrl: 'app/views/books/books.html',
+          controller: 'BooksController as ctrlBooks'
+        }
+      }
     });
+  $urlRouterProvider.otherwise('/books');
 }
