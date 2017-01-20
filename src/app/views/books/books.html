@@ -1,1 +1,8 @@
-<h1>{{ctrlBooks.books}}</h1>
+<div class="booksContainer" style="display:flex">
+  <div ng-click="goToBook(book.id)" class="books" ng-repeat="book in books">
+    <h1>{{book.titulo}}</h1>
+    <img ng-src="{{book.urlFoto}}"></img>
+    <h1>{{book.id}}</h1>
+  </div>
+
+</div>

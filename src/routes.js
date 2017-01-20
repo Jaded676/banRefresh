@@ -16,11 +16,20 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('app.books', {
       url: 'books',
       views: {
-        'menuBooks': {
+        'booksView': {
           templateUrl: 'app/views/books/books.html',
           controller: 'BooksController as ctrlBooks'
         }
       }
-    });
+    })
+      .state('app.bookDetail', {
+        url: 'bookDetail/:id',
+        views: {
+          'booksView': {
+            templateUrl: 'app/views/bookDetail/bookDetail.html',
+            controller: 'BookDetailController as ctrlBookDetail'
+          }
+        }
+      });
   $urlRouterProvider.otherwise('books');
 }
