@@ -13,8 +13,8 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: 'app/views/hello/hello.html',
       controller: 'HelloController as ctrl'
     })
-    .state('books', {
-      url: '/books',
+    .state('app.books', {
+      url: 'books',
       views: {
         'menuBooks': {
           templateUrl: 'app/views/books/books.html',
@@ -22,5 +22,5 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       }
     });
-  $urlRouterProvider.otherwise('/books');
+  $urlRouterProvider.otherwise('books');
 }
