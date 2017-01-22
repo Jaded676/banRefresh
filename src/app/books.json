@@ -1,0 +1,13 @@
+[{
+	"titulo": "Libro1",
+	"urlFoto": "http://lorempixel.com/g/200/300/",
+	"id": 1
+}, {
+	"titulo": "Libro2",
+	"urlFoto": "http://lorempixel.com/g/200/300/",
+	"id": 2
+}, {
+	"titulo": "Libro3",
+	"urlFoto": "http://lorempixel.com/g/200/300/",
+	"id": 3
+}]
