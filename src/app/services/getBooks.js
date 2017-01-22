@@ -1,6 +1,9 @@
 angular
   .module('app')
-  .service('getBooks', function ($scope,$rootScope,$state,$http) {
-
-
-  });
+  .factory('getBooks', function($http) {
+  return {
+    get: function() {
+      return $http.get('app/books.json');  //1. this returns promise
+    }
+  };
+});
