@@ -1,8 +1,8 @@
 <div class="booksContainer" style="display:flex">
-  <div ng-click="goToBook(book.id)" class="books" ng-repeat="book in books">
+  <div ng-click="ctrlBooks.goToBook(book.id)" class="books" ng-repeat="book in ctrlBooks.books">
     <h1>{{book.titulo}}</h1>
     <img ng-src="{{book.urlFoto}}"></img>
     <h1>{{book.id}}</h1>
   </div>
-
+  <h1>{{global}}</h1>
 </div>
