@@ -1,7 +1,12 @@
 angular
   .module('app')
-  .controller('BookDetailController', function ($scope,$rootScope,$state,$stateParams) {
+  .controller('BookDetailController', function ($scope,$rootScope,$state,$stateParams,bookService) {
     var vm = this;
-    alert($stateParams.id);
+    vm.book = bookService.getBook();
+    $scope.atras = function() {
+    $state.go('app.books');
+
+    };
+
 
   });
