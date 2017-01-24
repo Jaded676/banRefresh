@@ -1,0 +1,633 @@
+/* INTEGRAR EL HOME EMPRESAS */ 
+
+
+<header class="headerBanchile" ng-controller="VerNotificaciones">
+ <div class="headerBanchile--menuSitios">
+      <div class="menuSitios--opciones">
+          <ul>
+              <li><a href="#">PERSONAS</a></li>
+              <li class="opciones--activo">
+                <a class="opciones--activo__color" href="#" >EMPRESAS</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+
+    <div class="headerBanchile--menuGeneral" sticky>
+        <div class="ban-container-fluid">
+            <div class="ban-row">
+                  <div class="ban-col-xs-5 ban-col-sm-3 ban-col-md-3">
+                    <div class="menuGeneral--logo">
+                      <h1 id="logo--banchile">
+                          <a href="">
+                              <img alt="banchile" src="assets/images/logo--Banchile_E.png" class="ban-img-responsive"/>
+                          </a>
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="ban-col-xs-7 ban-col-sm-9 ban-col-md-9">
+                        <div class="ban-row">
+                          <div class="ban-col-xs-8 ban-col-sm-7 ban-col-md-9 ban-alingRight ban-widhtLeft">
+                            <!--
+                              <div class="menuGeneral--contenidoPublico">
+                                <md-button ng-href="" target="_blank">Asesoría personalizada</md-button>
+                                <md-button ng-href="" target="_blank">Productos y servicios</md-button>
+                                <md-button ng-href="" target="_blank">Reputación y respaldo</md-button>
+                              </div>
+                              <div class="menuGeneral--infoDesplegable">
+                                <md-button class="md-icon-button" aria-label="Indicadores" ng-click="indicadores($event)">
+                                    <md-icon>
+                                        <i class="material-icons">trending_up</i>
+                                    </md-icon>
+                                    <md-tooltip md-direction="Bottom">Indicadores</md-tooltip>
+                                </md-button>
+
+                              </div>-->
+
+                          </div>
+                          <div class="ban-col-xs-4 ban-col-sm-5 ban-col-md-3 ban-widhtRight">
+                            <div class="menuGeneral--ingresoUsuario">
+                                      <div class="ingresoUsuario--cuenta" ng-controller="expandCollapseCtrl">
+                                          <md-button class="colapsable--lateral-3" ng-class="{'header--cerrado': active6, 'header--expandido': !active6}">
+                                              <md-icon class="persona-user">
+                                                  <i class="material-icons">account_circle</i>
+                                              </md-icon>
+                                              <p class="cuenta--ingresar">Ingresa a tu cuenta</p>
+                                          </md-button>
+                                          <div class="cuenta--menu" ng-hide="active6">
+                                              <div class="menu--colapsable">
+                                                  <ul>
+                                                      <li>
+                                                          <div class="sesion--menu">
+                                                              <p class="texto--sesion">
+                                                                  Mi último acceso: 01/08/29016
+                                                              </p>
+                                                              <p class="texto--sesion">
+                                                                  Mi ejecutiva: Amanda Rivas
+                                                              </p>
+                                                              <p class="texto--sesion">
+                                                                  <md-button class="md-icon-button md-primary" aria-label="Settings">
+                                                                      <md-icon>
+                                                                          <i class="material-icons">phone</i>
+                                                                      </md-icon>
+                                                                  </md-button>
+                                                                  <md-button class="md-icon-button md-primary" aria-label="Settings">
+                                                                      <md-icon>
+                                                                          <i class="material-icons">mail</i>
+                                                                      </md-icon>
+                                                                  </md-button>
+                                                              </p>
+                                                              <p class="texto--sesion">
+                                                                  <md-button class="md-raised cerrar-sesion">CERRAR SESIÓN</md-button>
+                                                              </p>
+
+                                                          </div>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                      </div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="widget widget-show" ng-show="misIndicadores">
+            <md-button ng-click="indicadores($event)" aria-label="cerrar" class="md-icon-button widget--cerrar">
+                <md-icon><i class="material-icons">close</i></md-icon>
+            </md-button>
+            <div class="ban-container">
+                <div class="ban-row">
+                    <div class="ban-col-sm-12">
+                        <div class="widget--header">
+                            <h1 class="widget--titulos">Indicadores</h1>
+                            <md-button aria-label="Atrás" class="md-icon-button widget--vermas">
+                                <md-icon><i class="material-icons">arrow_forward</i></md-icon>
+                            </md-button>
+                        </div>
+                        <div class="widget--content" ng-controller="indicadoresHeaderCtrl">
+                            <div class="ban-row">
+                                <div class="ban-col-sm-6">
+                                    <div class="widget--indicadores">
+                                        <ul class="indicadores--ul">
+                                            <li class="indicadores--contenido" ng-repeat="indicadores in indicador" ng-class="{activado:isActiveTab(indicadores.url)}" ng-click="onClickTab(indicadores)">
+                                                <h2 class="indicadores--encabezado">{{indicadores.indicador}}</h2>
+                                                <p class="indicadores--parrafo">{{indicadores.valor}}</p>
+                                                <p class="indicadores--variacion indicadores--variacion__rojo">{{indicadores.variacion}}%</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="ban-col-sm-6">
+                                    <div class="widget--grafico">
+                                        <div class="ban-row">
+                                            <div class="ban-col-sm-1">
+                                            </div>
+                                            <div class="ban-col-sm-11">
+                                                <div ng-include="currentTab"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/ng-template" id="dolar.tpl.html">
+                <div class="grafico--indica bold">Dólar</div>
+                <div class="grafico--datos">659,75<span class="dato--indicador__up">-0,48%</span></div>
+                <div class="grafico--actualizacion">Última actualización: 23/09/2016 11:40:29</div>
+                <div class="grafico--bienvenida">
+                    <img alt="test" src="assets/images/grafico01.png" class="ban-img-responsive">
+                </div>
+            </script>
+            <script type="text/ng-template" id="euro.tpl.html">
+                <div class="grafico--indica bold">Euro</div>
+                <div class="grafico--datos">713,11<span class="dato--indicador__up">-0,48%</span></div>
+                <div class="grafico--actualizacion">Última actualización: 23/09/2016 11:39:28</div>
+                <div class="grafico--bienvenida">
+                    <img alt="test" src="assets/images/grafico01.png" class="ban-img-responsive">
+                </div>
+            </script>
+            <script type="text/ng-template" id="ipsa.tpl.html">
+                <div class="grafico--indica bold">IPSA</div>
+                <div class="grafico--datos">4011,95<span class="dato--indicador__up">-0,43%</span></div>
+                <div class="grafico--actualizacion">Última actualización: 23/09/2016 11:40:29</div>
+                <div class="grafico--bienvenida">
+                    <img alt="test" src="assets/images/grafico01.png" class="ban-img-responsive">
+                </div>
+            </script>
+            <script type="text/ng-template" id="igpa.tpl.html">
+                <div class="grafico--indica bold">IGPA</div>
+                <div class="grafico--datos">19800,43<span class="dato--indicador__up">-0,36%</span></div>
+                <div class="grafico--actualizacion">Última actualización: 23/09/2016 11:40:06</div>
+                <div class="grafico--bienvenida">
+                    <img alt="test" src="assets/images/grafico01.png" class="ban-img-responsive">
+                </div>
+            </script>
+            <script type="text/ng-template" id="uf.tpl.html">
+                <div class="grafico--indica bold">UF</div>
+                <div class="grafico--datos">26121,46<span class="dato--indicador__up">-0,06%</span></div>
+                <div class="grafico--actualizacion">Última actualización: 23/09/2016 11:35:44</div>
+                <div class="grafico--bienvenida">
+                    <img alt="test" src="assets/images/grafico01.png" class="ban-img-responsive">
+                </div>
+            </script>
+            <script type="text/ng-template" id="utm.tpl.html">
+                <div class="grafico--indica bold">UTM</div>
+                <div class="grafico--datos">45999,00<span class="dato--indicador__up">-0,22%</span></div>
+                <div class="grafico--actualizacion">Última actualización: 23/09/2016 11:37:20</div>
+                <div class="grafico--bienvenida">
+                    <img alt="test" src="assets/images/grafico01.png" class="ban-img-responsive">
+                </div>
+            </script>
+            <script type="text/ng-template" id="sp.tpl.html">
+                <div class="grafico--indica bold">SP 500</div>
+                <div class="grafico--datos">2177,13<span class="dato--indicador__up">-0,65%</span></div>
+                <div class="grafico--actualizacion">Última actualización: 23/09/2016 11:34:09</div>
+                <div class="grafico--bienvenida">
+                    <img alt="test" src="assets/images/grafico01.png" class="ban-img-responsive">
+                </div>
+            </script>
+            <script type="text/ng-template" id="bovespa.tpl.html">
+                <div class="grafico--indica bold">BOVESPA</div>
+                <div class="grafico--datos">58994,17<span class="dato--indicador__up">-1,03%</span></div>
+                <div class="grafico--actualizacion">Última actualización: 23/09/2016 11:41:19</div>
+                <div class="grafico--bienvenida">
+                    <img alt="test" src="assets/images/grafico01.png" class="ban-img-responsive">
+                </div>
+            </script>
+        </div>
+    </div>
+</header>
+
+
+  <section class="home--presentacion home-sec">
+      <div class="ban-container ban-paddingCarrousel">
+          <div class="ban-row">
+              <div class="ban-col-md-6 ban-col-md-offset-6">
+                  <h2 class="home--titulo__header wow fadeIn" data-wow-delay="0.3s">
+                    La visión del líder</h2>
+              </div>
+          </div>
+          <div class="ban-row">
+            <div class="ban--mobilecarrousel ban-col-xs-7 ban-col-xs-offset-5 ban-col-sm-7 ban-col-sm-offset-5 ban-col-md-4 ban-col-md-offset-8">
+              <div class="carrusel--bloque">
+                  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                          <div class="item active">
+                              <div class="carousel--contenido">
+                                  <p class="carousel--parrafo">
+                                      Oferta pública de adquisición de acciones
+                                      <span class="bold">Gas Natural Chile</span>
+                                  </p>
+                              </div>
+                              <img src="assets/images/carrusel.png"/>
+                          </div>
+                          <div class="item">
+                              <div class="carousel--contenido">
+                                  <p class="carousel--parrafo">
+                                      Oferta pública de adquisición de acciones
+                                      <span class="bold">Gas Natural Chile</span>
+                                  </p>
+                              </div>
+                              <img src="assets/images/carrusel.png"/>
+                          </div>
+                          <div class="item">
+                              <div class="carousel--contenido">
+                                  <p class="carousel--parrafo">
+                                      Oferta pública de adquisición de acciones
+                                      <span class="bold">Gas Natural Chile</span>
+                                  </p>
+                              </div>
+                              <img src="assets/images/carrusel.png"/>
+                          </div>
+                      </div>
+                      <md-button class="md-icon-button left botones--carrusel-A" href="#carousel-example-generic" data-slide="prev">
+                          <md-icon>
+                              <span >
+                                  <i class="material-icons">chevron_left</i>
+                              </span>
+                          </md-icon>
+                      </md-button>
+                      <md-button class="md-icon-button right botones--carrusel-B" href="#carousel-example-generic" data-slide="next">
+                          <md-icon>
+                              <span >
+                                  <i class="material-icons">chevron_right</i>
+                              </span>
+                          </md-icon>
+                      </md-button>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </section>
+  <!--  menu 1-->
+      <section class="home--indicadores">
+    <!--
+    <div class="icon--swipe">
+      <md-icon>
+              <i class="material-icons">chevron_right</i>
+      </md-icon>
+    </div>-->
+
+      <div class="ban-container" ng-cloak>
+          <div class="ban-row">
+              <div class="ban-col-xs-12">
+
+                <div class="menu--sticky">
+                    <div id="sticker_2">
+                      <div class="menu--navegacion_B">
+                          <div class="navbar--menu_B" >
+                              <div class="navbar--menu_B" >
+                              <md-content class="md-padding invisibar" >
+                                <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links" aria-label="menu">
+                                    <!-- indicador 01 repetir-->
+                                    <md-nav-item md-nav-href="#" >
+                                      <div class="indicadores--lista" >
+                                          <div class="indicadores--bloque" >
+                                              <div class="indicador--dato" >
+                                                  <p >
+                                                    <span class="indicador--unique__left">
+                                                        <!-- porcentaje -->
+                                                      Dólar Obs.
+                                                    </span>
+
+
+                                                    <span class="indicador--unique__up">
+                                                        <!-- porcentaje -->
+                                                      0,02%
+                                                    </span>
+                                                  </p>
+                                                  <p>
+                                                    <span class="indicador--unique">
+                                                      <!-- monto de indicador -->
+                                                      $650,78
+                                                    </span>
+                                                  </p>
+                                              </div>
+                                              <div class="indicador--grafico" >
+                                                  <!-- grafico -->
+                                                  <img src="assets/images/indicadores-down.png"/ class="img-responsive">
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </md-nav-item>
+                                    <!-- indicador 02 repetir-->
+                                    <md-nav-item md-nav-href="#" >
+                                      <div class="indicadores--lista" >
+                                          <div class="indicadores--bloque" >
+                                              <div class="indicador--dato" >
+                                                  <p >
+                                                    <span class="indicador--unique__left">
+                                                        <!-- porcentaje -->
+                                                      Euro
+                                                    </span>
+
+
+                                                    <span class="indicador--unique__up">
+                                                        <!-- porcentaje -->
+                                                      0,02%
+                                                    </span>
+                                                  </p>
+                                                  <p>
+                                                    <span class="indicador--unique">
+                                                      <!-- monto de indicador -->
+                                                      $713,11
+                                                    </span>
+                                                  </p>
+                                              </div>
+                                              <div class="indicador--grafico" >
+                                                  <!-- grafico -->
+                                                  <img src="assets/images/indicadores-down.png"/ class="img-responsive">
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </md-nav-item>
+                                    <!-- indicador 03 repetir-->
+                                    <md-nav-item md-nav-href="#" >
+                                      <div class="indicadores--lista" >
+                                          <div class="indicadores--bloque" >
+                                              <div class="indicador--dato" >
+                                                  <p >
+                                                    <span class="indicador--unique__left">
+                                                        <!-- porcentaje -->
+                                                      IPSA
+                                                    </span>
+
+
+                                                    <span class="indicador--unique__up">
+                                                        <!-- porcentaje -->
+                                                      -0,43%
+                                                    </span>
+                                                  </p>
+                                                  <p>
+                                                    <span class="indicador--unique">
+                                                      <!-- monto de indicador -->
+                                                      $4.011,85
+                                                    </span>
+                                                  </p>
+                                              </div>
+                                              <div class="indicador--grafico" >
+                                                  <!-- grafico -->
+                                                  <img src="assets/images/indicadores-down.png"/ class="img-responsive">
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </md-nav-item>
+                                    <!-- indicador 04 repetir-->
+                                    <md-nav-item md-nav-href="#" >
+                                      <div class="indicadores--lista" >
+                                          <div class="indicadores--bloque" >
+                                              <div class="indicador--dato" >
+                                                  <p >
+                                                    <span class="indicador--unique__left">
+                                                        <!-- porcentaje -->
+                                                      IGPA
+                                                    </span>
+
+
+                                                    <span class="indicador--unique__up">
+                                                        <!-- porcentaje -->
+                                                      -0,36%
+                                                    </span>
+                                                  </p>
+                                                  <p>
+                                                    <span class="indicador--unique">
+                                                      <!-- monto de indicador -->
+                                                      $19.800,43
+                                                    </span>
+                                                  </p>
+                                              </div>
+                                              <div class="indicador--grafico" >
+                                                  <!-- grafico -->
+                                                  <img src="assets/images/indicadores-down.png"/ class="img-responsive">
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </md-nav-item>
+                                    <!-- indicador 05 repetir-->
+                                    <md-nav-item md-nav-href="#" >
+                                      <div class="indicadores--lista" >
+                                          <div class="indicadores--bloque" >
+                                              <div class="indicador--dato" >
+                                                  <p >
+                                                    <span class="indicador--unique__left">
+                                                        <!-- porcentaje -->
+                                                      UF
+                                                    </span>
+
+
+                                                    <span class="indicador--unique__up">
+                                                        <!-- porcentaje -->
+                                                      0,06%
+                                                    </span>
+                                                  </p>
+                                                  <p>
+                                                    <span class="indicador--unique">
+                                                      <!-- monto de indicador -->
+                                                      $26.121,46
+                                                    </span>
+                                                  </p>
+                                              </div>
+                                              <div class="indicador--grafico" >
+                                                  <!-- grafico -->
+                                                  <img src="assets/images/indicadores-down.png"/ class="img-responsive">
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </md-nav-item>
+
+                                </md-nav-bar>
+                              </md-content>
+                          </div>
+                          </div>
+                      </div>
+
+
+                    </div>
+                </div>
+
+              </div>
+          </div>
+      </div>
+      </section>
+      <section data-section-title="Productos y servicios" class="home-sec home--productos">
+          <div class="ban-container">
+              <div class="ban-row">
+                  <div class="ban-titulo ban-col-md-12">
+                      <h2 class="home--titulo__section wow fadeInDown" data-wow-delay="0.8s">Productos <span class="destacado">y servicios</span></h2>
+                  </div>
+                  <div class="ban-mobile ban-col-xs-6 ban-col-sm-6 ban-col-md-6">
+                      <div class="productos--bloque">
+                          <div class="productos--imagen wow fadeIn">
+                            <md-icon md-font-set="banicon-fondos_mutuos titulo--icono"> </md-icon>
+                          </div>
+                          <h3 class="productos--titulos">Fondos Mutuos</h3>
+                          <p class="productos--parrafo">Los Fondos Mutuos son alternativas de inversión que permiten tanto a personas naturales como jurídicas, acceder a distintos mercados de una manera fácil, cómoda y conveniente.</p>
+                      </div>
+                  </div>
+                  <div class="ban-mobile ban-col-xs-6 ban-col-sm-6 ban-col-md-6">
+                      <div class="productos--bloque">
+                          <div class="productos--imagen wow fadeIn"><md-icon md-font-set="banicon-acciones titulo--icono"> </md-icon></div>
+                          <h3 class="productos--titulos">Acciones</h3>
+                          <p class="productos--parrafo">A través de Banchile Inversiones, usted puede comprar y vender todas las acciones transadas en la Bolsa de Comercio de Santiago y en la Bolsa Electrónica de Chile, con un excelente servicio y una rápida y eficiente ejecución de
+                              las órdenes.</p>
+                      </div>
+                  </div>
+                  <div class="ban-mobile ban-col-xs-6 ban-col-sm-6 ban-col-md-6">
+                      <div class="productos--bloque">
+                          <div class="productos--imagen wow fadeIn" data-wow-delay="0s">
+                            <md-icon md-font-set="banicon-moneda_extranjera titulo--icono"> </md-icon>
+                          </div>
+                          <h3 class="productos--titulos">Moneda Extranjera</h3>
+                          <p class="productos--parrafo">A través nuestro, usted puede realizar transacciones con dólares y otras monedas, obteniendo una gestión rápida y segura en todas las operaciones.</p>
+                      </div>
+                  </div>
+                  <div class="ban-mobile ban-col-xs-6 ban-col-sm-6 ban-col-md-6">
+                      <div class="productos--bloque">
+                          <div class="productos--imagen wow fadeIn">
+                            <md-icon md-font-set="banicon-moneda_extranjera titulo--icono"> </md-icon>
+                          </div>
+                          <h3 class="productos--titulos">Renta Fija</h3>
+                          <p class="productos--parrafo">Nuestros profesionales siempre le ofrecen la posibilidad de invertir en instrumentos de renta fija, optimizando la combinación de rentabilidad, flexibilidad y liquidez.</p>
+                      </div>
+                  </div>
+                  <div class="ban-mobile ban-col-xs-6 ban-col-sm-6 ban-col-md-6">
+                      <div class="productos--bloque">
+                          <div class="productos--imagen wow fadeIn"><md-icon md-font-set="banicon-mve titulo--icono"> </md-icon></div>
+                          <h3 class="productos--titulos">Mercado de Valores Extranjeros</h3>
+                          <p class="productos--parrafo">En Banchile Inversiones usted prodrá invertir en los mercados internacionales de manera fácil y expedita, teniendo la posibilidad de comprar y vender valores extranjeros como acciones y ETF's que actualmente se encuentran transando
+                              en la Bolsa de Comercio de Santiago.</p>
+                      </div>
+                  </div>
+                  <div class="ban-mobile ban-col-xs-6 ban-col-sm-6 ban-col-md-6">
+                      <div class="productos--bloque">
+                          <div class="productos--imagen wow fadeIn"><md-icon md-font-set="banicon-derivados titulo--icono"> </md-icon></div>
+
+                          <h3 class="productos--titulos">Derivados</h3>
+                          <p class="productos--parrafo">A través de Banchile Inversiones podrá acceder a productos de inversión más complejos como son los Productos Derivados, cuyo valor depende de un activo subyacente.</p>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+          </div>
+      </section>
+      <section parallax-background parallax-ratio="0.6" data-section-title="Invierte con un experto" class="home-sec home--invierte paraxify">
+          <div class="ban-container">
+              <div class="ban-row">
+                  <div class="ban-col-md-6">
+                      <div class="vertical-align">
+                          <div>
+                              <h2 class="home--titulo__section home--titulo__responsive wow fadeIn">Invierte <span class="destacado">como un experto</span></h2>
+                              <div class="invierte--bloque">
+                                  <p class="invierte--parrafo">Puedes revisar la información detallada sobre tus inversiones y operar sobre tus productos en línea de manera segura y ágil.</p>
+                                  <p class="invierte--parrafo invierte--botones wow fadeInUp">
+                                      <a class="download-app" href="#"><img src="assets/images/app_store2x.png"></a> &nbsp;
+                                      <a class="download-app" href="#"><img src="assets/images/google_play2x.png"></a>
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section data-section-title="Líderes en el mercado" class="home-sec home--lideres">
+                <div class="ban-container">
+                    <div class="ban-row">
+                        <div class="ban-col-md-6">
+                            <h2 class="home--titulo__section wow fadeInDown">Reputación<span class="destacado"> y respaldo</span></h2>
+                            <div class="lideres--bloque">
+                                <p class="lideres--parrafo">Entregamos un servicio de excelencia basado en la asesoría y capacidad de acceso para la selección de activos y conformación de portafolios de inversión precisos. Por más de 35 años hemos forjado una sólida reputación y nos hemos consolidado como líderes del mercado nacional.</p>
+                                <img class="lideres--imagen" alt="" src="assets/images/logo-win.png">
+                            </div>
+                        </div>
+                        <div class="ban-col-md-6">
+                            <ul class="lideres--historial wow fadeInLeft" data-wow-delay="0.8s">
+                                <li class="historial--item">
+                                    <p class="historial--fecha">12/8/2016</p>
+                                    <div class="historial--detalle ban__no-border ">
+                                        <i class="historial--icono"><img class="ban-img-responsive" src="assets/images/ico-win.png" alt="icono trofeo"></i>
+                                        <h3 class="historial--titulo">Great Place to Work</h3>
+                                        <p class="historial--parrafo">Nuevamente entre las mejores empresas para trabajar según el ranking de GPTW.</p>
+                                    </div>
+                                </li>
+                                <li class="historial--item">
+                                    <p class="historial--fecha">12/8/2016</p>
+                                    <div class="historial--detalle">
+                                        <i class="historial--icono"><img class="ban-img-responsive" src="assets/images/ico-win.png" alt="icono trofeo"></i>
+                                        <h3 class="historial--titulo">Premio Líderes Financieros 2015</h3>
+                                        <p class="historial--parrafo">Mejor Agente de OPA, Mejor Operación OPA. </br>
+                                          Mejor Bono en Mercado Internacional.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="historial--item">
+                                    <p class="historial--fecha">12/8/2016</p>
+                                    <div class="historial--detalle">
+                                        <i class="historial--icono"><img class="ban-img-responsive" src="assets/images/ico-win.png" alt="icono trofeo"></i>
+                                        <h3 class="historial--titulo">Global Finance: Best Asset Managers for corporates Awards 2015</h3>
+                                        <p class="historial--parrafo">Best Manager Based In Emerging Markets.</p>
+                                    </div>
+                                </li>
+                                <li class="historial--item">
+                                    <p class="historial--fecha">12/8/2016</p>
+                                    <div class="historial--detalle">
+                                        <i class="historial--icono"><img class="ban-img-responsive" src="assets/images/ico-win.png" alt="icono trofeo"></i>
+                                        <h3 class="historial--titulo">75 Premios Salmón</h3>
+                                        <p class="historial--parrafo">5 premios en 2015 y 75 premios acumulados nos hacen la Administradora más ganadora en la historia de los Premios Salmón.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+      </section>
+      <section parallax-background parallax-ratio="0.2" data-section-title="Información" class="home-sec home--informate paraxify">
+          <div class="ban-container">
+              <div class="ban-row">
+                  <div class="ban-col-md-7"></div>
+                  <div class="ban-col-md-5">
+                      <h2 class="home--titulo__section wow fadeInDown" data-wow-delay="0.2s">Información para <span class="destacado destacado__block">mis decisiones</span></h2>
+                      <div class="informate--bloque">
+                          <p class="informate--parrafo">Los estudios de empresas elaborados por el Departamento de Estudios de Banchile Inversiones muestran estimaciones de resultados, precios objetivos y recomendaciones de inversión para distintas compañías nacionales.</p>
+                          <p class="informate--parrafo informate--parrafo__link">
+                              Informe Semanal
+                          </p>
+                          <p class="informate--parrafo informate--parrafo__link">
+                              Apertura Bursátil
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+
+      <!-- footer -->
+     <footer>
+        <div class="ban-container">
+           <div class="ban-row">
+              <div class="ban-col-xs-12">
+                 <div class="footerLight">
+                    <figure class="footerLight--icon">
+                       <img alt="test" src="assets/images/iconBanchile.png" class="ban-img-responsive"/>
+                    </figure>
+                    <p class="footerLight--copy">©2016 Banchile Inversiones.</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </footer>
