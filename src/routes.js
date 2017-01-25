@@ -5,45 +5,44 @@ angular
 /** @ngInject */
 function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 
-
   $stateProvider
-    .state('banchileApp', {
+    .state('app', {
       url: '/',
       abstract: true,
-      templateUrl: 'banchileApp/views/home/home.html',
-      controller: 'HomeController as ctrl'
+      templateUrl: 'app/views/main/main.html',
+      controller: 'MainController as ctrlMain'
     })
-    .state('banchileApp.login', {
+    .state('app.login', {
       url: 'login',
       views: {
-        'loginView': {
+        'mainView': {
           templateUrl: 'app/views/login/login.html',
           controller: 'LoginController as ctrlLogin'
         }
       }
     })
-      .state('banchileApp.bienvenidos', {
+      .state('app.bienvenidos', {
         url: 'bienvenidos',
         views: {
-          'booksView': {
-            templateUrl: 'app/views/bienvenidos/bienvenido.html',
+          'mainView': {
+            templateUrl: 'app/views/bienvenidos/bienvenidos.html',
             controller: 'BienvenidosController as ctrlBienvenidos'
           }
         }
       })
 
-      .state('banchileApp.consultar', {
+      .state('app.consultar', {
         url: 'consultar/',
         abstract: true,
         views: {
-          'consultarView': {
+          'mainView': {
             templateUrl: 'app/views/consultar/consultar.html',
             controller: 'ConsultarController as ctrlConsultar'
           }
         }
       })
 
-      .state('banchileApp.consultar.resumen', {
+      .state('app.consultar.resumen', {
         url: 'resumen',
         views: {
           'consultarView': {
@@ -53,7 +52,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       })
 
-      .state('banchileApp.consultar.patrimonio', {
+      .state('app.consultar.patrimonio', {
         url: 'patrimonio',
         views: {
           'consultarView': {
@@ -63,7 +62,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       })
 
-      .state('banchileApp.consultar.autorizaciones', {
+      .state('app.consultar.autorizaciones', {
         url: 'autorizaciones',
         views: {
           'consultarView': {
@@ -73,7 +72,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       })
 
-      .state('banchileApp.consultar.movimientos', {
+      .state('app.consultar.movimientos', {
         url: 'movimientos',
         views: {
           'consultarView': {
@@ -83,7 +82,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       })
 
-      .state('banchileApp.consultar.documentos', {
+      .state('app.consultar.documentos', {
         url: 'documentos',
         views: {
           'consultarView': {
@@ -93,18 +92,18 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       })
 
-      .state('banchileApp.invertir', {
+      .state('app.invertir', {
         url: 'invertir/',
         abstract: true,
         views: {
-          'invertirView': {
+          'mainView': {
             templateUrl: 'app/views/invertir/invertir.html',
             controller: 'InvertirController as ctrlInvertir'
           }
         }
       })
 
-      .state('banchileApp.invertir.banchilepay', {
+      .state('app.invertir.banchilepay', {
         url: 'invertir',
         views: {
           'invertirView': {
@@ -114,28 +113,28 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       })
 
-      .state('banchileApp.definir', {
+      .state('app.definir', {
         url: 'definir/',
         abstract: true,
         views: {
-          'definirView': {
+          'mainView': {
             templateUrl: 'app/views/definir/definir.html',
             controller: 'DefinirController as ctrlDefinir'
           }
         }
       })
 
-      .state('banchileApp.definir.empresas', {
+      .state('app.definir.empresas', {
         url: 'empresas',
         views: {
-          'empresasView': {
+          'definirView': {
             templateUrl: 'app/views/empresas/empresas.html',
             controller: 'EmpresasController as ctrlEmpresas'
           }
         }
       })
 
-      .state('banchileApp.definir.usuarios', {
+      .state('app.definir.usuarios', {
         url: 'usuarios',
         views: {
           'definirView': {
@@ -145,7 +144,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       })
 
-      .state('banchileApp.definir.beneficiarios', {
+      .state('app.definir.beneficiarios', {
         url: 'beneficiarios',
         views: {
           'definirView': {
@@ -155,7 +154,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       })
 
-      .state('banchileApp.definir.favoritos', {
+      .state('app.definir.favoritos', {
         url: 'favoritos',
         views: {
           'definirView': {
@@ -165,5 +164,5 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       });
 
-  $urlRouterProvider.otherwise('resumen'); // ¿Donde me deberia llevar por defecto ?
+  $urlRouterProvider.otherwise('login');
 }

@@ -1,0 +1,181 @@
+body {
+  background-color: lightgrey;
+}
+
+/* MAIN HEADER */
+
+.headerBanchile {
+background-color: #ffffff;
+height: 133px;
+z-index: 100;
+  .headerBanchile--menuSitios {
+    width: 100%;
+    height: 36px;
+    -webkit-animation: fadeIn 1s;
+    color: #486C7C;
+    background: #eee;
+      .menuSitios--opciones {
+        float: right;
+        width: auto;
+        height: auto;
+        margin-right: 2em;
+          i {
+            margin: -5px 0 0;
+            padding: 0;
+            color: #486C7C;
+            font-size: 25px;
+            line-height: 30px;}
+            ul {
+              overflow: hidden;
+              margin: 0;
+              padding: 0;
+              list-style-type: none;
+              color: #486C7C;
+              line-height: 20px;}
+            .opciones--activo {
+              color: #5BABBF;
+              font-weight: 600;
+              border-bottom: solid 2px #5BABBF;
+                .opciones--activo__color {
+                  color: #5BABBF;}
+                }
+            li {
+              float: left;
+              margin: 0 15px 0 0;
+              font-size: 12px !important;
+              height: 30px;
+              line-height: 36px;
+            a {
+              display: block;
+              width: auto;
+              padding: 0px 0px;
+              text-decoration: none;
+              text-transform: uppercase;
+              color: #486C7C;
+              height: 1px;
+              font-size: 12px !important;
+              &:hover {
+              opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+.headerBanchile--menuGeneral {
+  height: 97px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.22);
+  -moz-box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.22)    ;
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.22);
+  z-index: 11 !important;
+  width: 100% !important;
+    .menuGeneral--logo{
+      max-width: 240px;
+      #logo--banchile {
+        display: inline-block;
+        float: left;
+        margin: 0 0 0 0.4em;
+        padding-top: 0.2em;
+        transition: all 0.7s ease;
+      }
+    }
+}
+.ban-alingRight{
+  text-align: right;}
+.menuGeneral--contenidoPublico {
+  margin: 0px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 32px;
+  margin-right: 2em;  }
+    a {
+      color: #486C7C;
+      text-transform: initial;
+      font-size: 16px;
+      font-size: 1rem;
+      @include lato-normal; }
+        .menuGeneral--infoDesplegable {
+            margin: 0px;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 35px;
+              .material-icons {
+                color: #5BABBF;
+                margin: 0;
+                padding: 0;
+            }
+        }
+.menuGeneral--ingresoUsuario{
+.colapsable--lateral-3 {
+  padding: 14px 14px 10px 0; }
+.ingresoUsuario--cuenta {
+  position: absolute;
+  top: 17px;
+  right: 10%;
+  z-index: 12; }
+    .cuenta--name {
+      color: #486C7C;
+      font-size: 16px;
+      margin: 0 !important;
+      text-transform: none;
+      white-space: nowrap !important;
+      float: left; }
+    .cuenta--ingresar {
+      color: #486C7C;
+      font-size: 16px;
+      margin: 0 !important;
+      text-transform: none;
+      white-space: nowrap !important;
+      float: left;
+      padding-top: 0.55em; }
+    .cuenta--rutName {
+      font-size: 14px !important;
+      line-height: 1.6em;
+      display: block;
+      text-align: left;
+      @include lato-light; }
+    .header--cerrado {
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: 500;
+      height: 70px;
+      line-height: 1em;
+      margin: 0;
+      position: relative;
+      width: 100%;
+      &:focus {
+        outline: none; }
+        }
+    .header--expandido {
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: 500;
+      height: 70px;
+      line-height: 1em;
+      margin: 0;
+      position: relative;
+      width: 100%;
+      &:focus {
+        outline: none; }
+      .icono--menu1 {
+        display: none; }
+      .icono--menu2 {
+        display: block !important; }
+        }
+      .persona-user {
+        float: left;
+        height: 35px;
+        margin: 0;
+        padding: 0 10px;
+        text-transform: none;
+        width: auto;
+          i {
+            color: $color-secundario;
+            font-size: 35px !important;
+            margin: 0;
+            padding: 0; }
+        }
+      .negocio {
+        margin: 15px 0 0; }
+  }
+}

@@ -1,2 +1,2 @@
 angular
-  .module('banchileApp', ['ui.router']);
+  .module('app', ['ui.router']);
