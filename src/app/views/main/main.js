@@ -1,5 +1,5 @@
 angular
-  .module('banchileApp')
+  .module('app')
   .controller('MainController', function ($scope,$rootScope,$state) {
     var vm = this;
       vm.main = "ABSTRACTA";

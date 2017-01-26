@@ -1,5 +1,5 @@
 angular
-  .module('banchileApp')
+  .module('app')
   .config(routesConfig);
 
 /** @ngInject */
