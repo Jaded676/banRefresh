@@ -1,4 +1,34 @@
-<header class="headerBanchile">
+<header>
+<div class="headerSegmento">
+  <ul class="headerSegmento--contenedor">
+    <li class="headerSegmento--lista"><a href="#">personas</a></li>
+    <li class="headerSegmento--lista"><a href="#">empresas</a></li>
+  </ul>
+</div>
+<div class="headerMenu">
+  <div class="logo"><a href=""><img src="app/assets/images/banchile-logo.png" alt="banchile"/></a></div>
+    <ul class=menuGeneral--contenidoPublico>
+      <li>Asesoria personalizada</li>
+      <li>Productos y Servicios</li>
+      <li>Reputación y respaldo</li>
+    </ul>
+    <div class="indicadores">
+    </div>
+    <div class="notificaciones">
+    </div>
+    <div class="usuarioLogin">
+    </div>
+</div>
+</header>
+<div class="backgroundConteiner">
+<img src="app/assets/images/bg-empresas.png" alt="">
+</div>
+
+<div ui-view="mainView"></div>
+<footer></footer>
+
+
+<!--<header class="headerBanchile">
   <div class="headerBanchile--menuSitios">
     <div class="menuSitios--opciones">
       <ul>
@@ -22,7 +52,7 @@
             <div class="ban-col-xs-8 ban-col-sm-7 ban-col-md-9 ban-alingRight ban-widhtLeft"></div>
             <div class="ban-col-xs-4 ban-col-sm-5 ban-col-md-3 ban-widhtRight">
               <div class="menuGeneral--ingresoUsuario">
-                <!--<div ng-controller="expandCollapseCtrl" class="ingresoUsuario--cuenta" >-->
+                <div ng-controller="expandCollapseCtrl" class="ingresoUsuario--cuenta" >
                   <md-button ng-class="{'header--cerrado': active6, 'header--expandido': !active6}" class="colapsable--lateral-3" >
                     <md-icon class="persona-user"><i class="material-icons"></i></md-icon>
                     <p class="cuenta--ingresar">Ingresa a tu cuenta</p>
@@ -35,7 +65,4 @@
       </div>
     </div>
   </div>
-</header>
-
-<div ui-view="mainView"></div>
-<footer>FOOTER</footer>
+</header>-->

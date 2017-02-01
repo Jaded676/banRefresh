@@ -6,16 +6,24 @@ angular
 function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $stateProvider
-    .state('app', {
+    .state('app.main2', {
       url: '/',
       abstract: true,
       templateUrl: 'app/views/main/main.html',
       controller: 'MainController as ctrlMain'
     })
+
+    .state('app', {
+      url: '/',
+      abstract: true,
+      templateUrl: 'app/views/maindos/maindos.html',
+      controller: 'MaindosController as ctrlMaindos'
+    })
+
     .state('app.login', {
       url: 'login',
       views: {
-        'mainView': {
+        'maindosView': {
           templateUrl: 'app/views/login/login.html',
           controller: 'LoginController as ctrlLogin'
         }
@@ -24,9 +32,19 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       .state('app.bienvenidos', {
         url: 'bienvenidos',
         views: {
-          'mainView': {
+          'maindosView': {
             templateUrl: 'app/views/bienvenidos/bienvenidos.html',
             controller: 'BienvenidosController as ctrlBienvenidos'
+          }
+        }
+      })
+
+      .state('app.actualizacion', {
+        url: 'actualizacion',
+        views: {
+          'maindosView': {
+            templateUrl: 'app/views/actualizacion/actualizacion.html',
+            controller: 'ActualizacionController as ctrlActualizacion'
           }
         }
       })
