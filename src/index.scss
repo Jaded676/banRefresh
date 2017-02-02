@@ -202,11 +202,12 @@ a {
 
 .actualizacionConteiner {
 
-  background: #fff;
+  background: #ccc;
   color: #535557;
   height: 600px;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
 
   display: -webkit-box;
   display: -moz-box;
@@ -217,6 +218,7 @@ a {
 
 .actualizacionInfo {
 
+  display: flex;
   flex-direction: column;
   align-items: center;
 
@@ -225,6 +227,7 @@ a {
   display: -ms-flexbox;
   display: -webkit-flex;
 
+
 }
 
 p .userName
@@ -232,15 +235,6 @@ p .userName
 .textoUno {
 
   color: #536374;
-  display: flex;
-
-
-  align-items: center;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-
 
 }
 
@@ -258,6 +252,12 @@ p .userName
 .textoUno {
   font-size: 14px;
   text-align: center;
+}
+
+
+.actualizacionOpcion--conteiner {
+  display: flex;
+
 }
 
 .infoContenedor {
