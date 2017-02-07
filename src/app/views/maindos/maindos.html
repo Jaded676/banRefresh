@@ -13,12 +13,13 @@
   <div class="col-sm-8 col-sm-offset-2 menubarUno">Actualización de Datos</div>
 </div>
 
-<section>
+<section class="row">
 <!--<div class="row">
   <div class="col-sm-8 col-sm-offset-2 menubarDos">-->
 
+<md-card="col-sm-8 col-sm-offset-2 actualizacionConteiner">
   <div class="row menubarDos">
-    <md-card class="col-sm-8 col-sm-offset-2 datosPasos">
+    <div class="col-sm-8 col-sm-offset-2 datosPasos">
       <div class="datosIniciales">
         <div class="numero">1</div>
         <p class="datosIniciales--title">Datos Iniciales</p>
@@ -31,7 +32,7 @@
         <div class="numero">3</div>
         <p class="datosIniciales--title">Datos para invertir</p>
       </div>
-
+  </div>
   </div>
 
     <!--<md-content class=" md-padding">
@@ -50,11 +51,11 @@
     <p class="datosIniciales--title">Datos Personales</p>
   </div>
 </div>
-</md-card>
+
 
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2">
-    <md-card class="datosPersonales">
+    <div class="datosPersonales">
       <md-card-content>
         <div class="infoUser">
           <img src="app/assets/images/fotouser.png" alt="">
@@ -93,9 +94,10 @@
           </div>
         </form>
       </md-card-content>
-    </md-card>
+    </div>
 </div>
 </div>
+
 
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2 datosPersonales_preguntas">
@@ -133,13 +135,9 @@
   </div>
 </div>-->
 
-
-
-
+</md-card>
 </section>
 
-
-<!--ESTO DEBERIA IR EN EL FOOTER-->
 <div class="row textoAyuda">
   <div class="col-xs-8 col-xs-offset-2">
   <i class="material-icons">error</i>
@@ -147,6 +145,9 @@
   </div>
 </div>
 
+
+
+<!--ESTO DEBERIA IR EN EL FOOTER-->
 <footer>
 <div class="footer">
   <div class="footer--logo">
