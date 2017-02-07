@@ -1,79 +1,158 @@
 <header>
     <div class="row headerDos">
       <div class="col-xs-5 col-xs-offset-5 headerDos--logo">
-        <a href=""><img src="app/assets/images/banchile-logo.png" alt="banchile"/></a></div>
-    </div>
-</header>
-<div class="backgroundConteiner">
-<img src="app/assets/images/bg_empresas_actualizar.png" alt="">
-</div>
-
-<!--ESTO DEBERIA IR EN VISTA ACTUALIZACION-->
-<div class="row">
-  <div class="col-sm-8 col-sm-offset-2 menuBar">Actualizacion de Datos</div>
-</div>
-
-<div class="row">
-  <md-card class="col-xs-8 col-xs-offset-2 actualizacionConteiner">
-    <div class="col-xs-12">
-      <div class="actualizacionInfo">
-        <p class="userName">Gonzalo Ahumana</p>
-        <p class="tituloUno">Necesitamos tu informacion</p>
-        <p class="textoUno">La Superintendencia de Valores y Seguros (SVS) nos exige mantener tus datos actualizados de acuerdo a la normativa NCG380. Necesitamos que actualices tu información y firmes algunos contratos para que puedas seguir invirtiendo con nosotros</p>
+        <a href=""><img src="app/assets/images/banchile-logo.png" alt="banchile"/></a>
       </div>
     </div>
-    <div class="col-md-12 actualizacionOpcion--conteiner">
-      <div class="infoContenedor">
-      <md-card class="col-md-4 infoa">
-        <img src="app/assets/images/infoa.png" alt=""/>
-        <md-card-content>
-          <p class="info--title">Utiliza información real</p>
-          <p class="info--texto">Es muy importante para nosotros tener toda tu información para entregarte una mejor atención y asesoría.</p>
-          <p class="info--textodos">No contar con esa información dificulta que podamos conocerte más.</p>
-        </md-card-content>
-      </md-card>
-      <md-card class="col-md-4 infob">
-        <img src="app/assets/images/infob.png" alt="">
-        <md-card-content>
-          <p class="info--title">Completa todos los campos </p>
-          <p class="info--texto">Existen datos que son obligatorios y otros opcionales, te vamos a ayudar a identificar estos campos con colores.</p>
-          <p class="info--textodos">Los datos obligatorios se marcarán en rojo y los opcionales en naranjo </p>
-        </md-card-content>
-      </md-card>
-      <md-card class="col-md-4 infoc">
-        <img src="app/assets/images/infoc.png" alt="">
-        <md-card-content>
-          <p class="info--title">Firmar contratos</p>
-          <p class="info--texto">Para finalizar este proceso debes firmar  tus contratos con la nueva información para poder invertir con nosotros.</p>
-          <p class="info--textodos">Tus contratos serán enviados a tu correo electrónico actualizado.</p>
-        </md-card-content>
-      </md-card>
-    </div>
-    </div>
-  </md-card>
+</header>
+<section class="backgroundConteiner">
+  <img src="app/assets/images/bg_empresas_actualizar.png" alt="">
+</section>
+
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2 menubarUno">Actualización de Datos</div>
 </div>
+
+<section>
+<!--<div class="row">
+  <div class="col-sm-8 col-sm-offset-2 menubarDos">-->
+
+  <div class="row menubarDos">
+    <md-card class="col-sm-8 col-sm-offset-2 datosPasos">
+      <div class="datosIniciales">
+        <div class="numero">1</div>
+        <p class="datosIniciales--title">Datos Iniciales</p>
+      </div>
+      <div class="datosIniciales">
+        <div class="numero">2</div>
+        <p class="datosIniciales--title">Datos de contacto</p>
+      </div>
+      <div class="datosIniciales">
+        <div class="numero">3</div>
+        <p class="datosIniciales--title">Datos para invertir</p>
+      </div>
+
+  </div>
+
+    <!--<md-content class=" md-padding">
+      <md-nav-bar class="lista" md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links" aria-label="menu" >
+        <md-nav-item  class="x1" md-nav-href="#datos_iniciales" name="datos_iniciales">Datos iniciales</md-nav-item>
+        <md-nav-item  class="x1" md-nav-href="#datos_contacto" name="datos_contacto">Datos de contacto</md-nav-item>
+        <md-nav-item  class="x1" md-nav-href="#datos_invertir" name="datosparainvertir">Datos para invertir</md-nav-item>
+      </md-nav-bar>
+    </md-content>-->
+  </div>
+</div>
+
+<div class="col-sm-8 col-sm-offset-2 datosPasos--uno">
+  <div class="datosIniciales">
+    <i class="material-icons datosPersonales--icono">check_circle</i>
+    <p class="datosIniciales--title">Datos Personales</p>
+  </div>
+</div>
+</md-card>
+
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <md-card class="datosPersonales">
+      <md-card-content>
+        <div class="infoUser">
+          <img src="app/assets/images/fotouser.png" alt="">
+          <p class="infoUser--nombre">Gonzalo Ahumada Galvés 23.4567.890-k</p>
+        </div>
+      <form name="projectForm">
+          <div layout-gt-sm="row">
+            <md-input-container flex="25">
+              <label>Sexo</label>
+                <md-select name="type" ng-model="project.type" required="">
+                  <md-option value="app">Femenino</md-option>
+                  <md-option value="web">Masculino</md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm flex="25">
+              <label>Nacionalidad</label>
+              <md-select ng-model="user.state">
+              <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                {{state.abbrev}}
+              </md-option>
+              </md-select>
+            </md-input-container>
+            <md-input-container flex="25">
+              <label>Fecha de nacimiento</label>
+              <md-datepicker ng-model="user.submissionDate"></md-datepicker>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm flex="25">
+              <label>Pasaporte</label>
+              <input name="social" ng-model="user.social" ng-pattern="/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/" />
+              <div class="hint" ng-if="showHints">###-##-####</div>
+                <div ng-messages="userForm.social.$error" ng-if="!showHints">
+                  <div ng-message="pattern">###-##-#### - Please enter a valid SSN.</div>
+                </div>
+            </md-input-container>
+          </div>
+        </form>
+      </md-card-content>
+    </md-card>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2 datosPersonales_preguntas">
+    <p class="preguntaUno">¿Eres Norteamericano?</p>
+    <p class="preguntaUno_info">Debes completar la declaración</p>
+  </div>
+
+  <div class="col-sm-8 col-sm-offset-2">
+    <md-radio-group class="preguntaUno--seleccion" ng-model="data.group1">
+      <md-radio-button value="Si" class="md-primary">Si</md-radio-button>
+      <md-radio-button value="No">No</md-radio-button>
+    </md-radio-group>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2 datosPersonales_preguntas">
+    <p class="preguntaDos">¿ Has residido durante el último año más de 183 días en Estados Unidos u otro país asociado ?</p>
+  </div>
+
+  <div class="col-sm-8 col-sm-offset-2">
+    <md-radio-group class="preguntaUno--seleccion" ng-model="data.group1">
+      <md-radio-button value="Si" class="md-primary">Si</md-radio-button>
+      <md-radio-button value="No">No</md-radio-button>
+    </md-radio-group>
+  </div>
+</div>
+
+<!--<div class="row">
+  <div class="col-sm-8 col-sm-offset-2 datosPasos">
+    <div class="datosIniciales">
+      <i class="material-icons datosPersonales--icono">check_circle</i>
+      <p>Datos Profesionales</p>
+    </div>
+  </div>
+</div>-->
+
+
+
+
+</section>
+
 
 <!--ESTO DEBERIA IR EN EL FOOTER-->
 <div class="row textoAyuda">
   <div class="col-xs-8 col-xs-offset-2">
-
-
-  <img src="" alt="">
+  <i class="material-icons">error</i>
   <p>Si tienes algún problema con tu actualización o quieres modificar datos sensibles, no dudes en contactarnos al 800 208020 o a contacto@banhile.cl</li>
+  </div>
 </div>
-</div>
+
 <footer>
 <div class="footer">
-  <div class="">
-
+  <div class="footer--logo">
+    <a href=""><img src="app/assets/images/banchile-logo-footer.png" alt="banchile"/> ©2016 Banchile Inversiones.</a></div>
   </div>
-  <div class="footer--logo"><a href=""><img src="app/assets/images/banchile-logo-footer.png" alt="banchile"/> ©2016 Banchile Inversiones.</a></div>
-</div>
 </footer>
-
-
-
-
 
 
 <div ui-view="actualizacion"></div>
