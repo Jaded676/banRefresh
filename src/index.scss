@@ -32,7 +32,7 @@
 }
 
 body {
-  background-color: lightgrey;
+  background-color: #fff;
   height: 100%;
   padding: 0px;
 }
@@ -389,10 +389,11 @@ md-icon.md-datepicker-calendar-icon:hover {
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  transform: translateY(-230%);
+  /*transform: translateY(-230%);*/
 }
 
 .datosPasos--uno {
+  margin-top: 5%;
   padding-top: 1%;
   height: 50px;
   display: flex;
@@ -402,7 +403,7 @@ md-icon.md-datepicker-calendar-icon:hover {
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  transform: translateY(-230%);
+  /*transform: translateY(-230%);*/
 }
 
 .datosIniciales img {
@@ -460,4 +461,20 @@ md-icon.md-datepicker-calendar-icon:hover {
   font-size: 18px;
   color:#4A4A4A;
   padding-left: 2%;
+}
+
+
+.card-container {
+  display: flex;
+  transform: translateY(-19%);
+
+}
+
+.textoAyuda {
+  
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
