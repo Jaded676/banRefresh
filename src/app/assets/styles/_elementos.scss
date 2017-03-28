@@ -1,0 +1,221 @@
+// helpers
+
+.h—paddingTop{
+	padding-top: 1.5em;
+}
+
+// inputs
+
+.input--dropdowns, .input--text {
+	width: 100%;
+    font-size: 16px;
+    font-size: 1rem;
+	 line-height: 1.3em;
+    margin-top: 1.8em;
+	 .input--text_monto{
+	 font-size: 1.5em !important;
+	 text-align: right;
+	 /* actualizacion jorge de label banchilepay*/
+	 label.formulario--input--pagar {
+			@include font-22;
+			overflow: inherit;
+			padding-bottom: 0.1em;
+		}
+	 }
+}
+.input--hint_select {
+	left: 2px;
+	right: auto;
+	@include font-12;
+	line-height: 1.16em;
+	transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+	color: $color-caption;
+	padding-top: 0.125em;
+	font-style: italic;
+}
+
+// CHIPS
+.tags {
+  padding-left: 30px;
+  display: inline-block;
+  .tags--chip {
+	 background-color: #D8D8D8;
+	 border-radius: 16px;
+	 box-sizing: border-box;
+	 display: inline-block;
+	 @include font-14;
+	 height: 32px;
+	 line-height: 32px;
+	 max-width: 100%;
+	 margin: 0.5em 0.5em 0 0;
+	 padding: 0 12px;
+  }
+  .chip--cerrar {
+	 background: 0 0;
+	 border: none;
+	 box-shadow: none;
+	 height: 18px;
+	 margin: 0;
+	 min-width: 0;
+	 padding: 0;
+	 text-align: center;
+	 width: 18px;
+	 &:focus {
+		outline: none;
+	 }
+	 md-icon i{
+		color: $color-active;
+	 }
+  }
+}
+
+
+// titulos
+.titulo{
+		display: block;
+		font-family: 'Lato';
+		vertical-align: top;
+		padding: 0.625em 0 0.5em 0;
+		border-bottom: 1px solid #CCD1D9;
+		@include font-36;
+		@include lato-light;
+	   md-icon {
+		   vertical-align: initial;
+		   font-size: 45px;
+		   margin: 0em 0em 0em 0em;
+		   padding: 0px;
+		   width: auto;
+		   height: auto;
+	    }
+}
+
+.subtitulo {
+    line-height: 1.5em;
+    border-bottom: 1px solid #CCD1D9;
+    color: #536374;
+    padding-top: 0.7em;
+    @include font-20;
+}
+
+.subtitulos__sinborde {
+	display: inline-block;
+	@include font-20;
+	vertical-align: middle;
+	@include lato-normal;
+	padding: 1em 0;
+}
+
+// botones check
+
+.check {
+	background-color: $background-principal;
+	color: $color-secundario-blanco;
+	border-radius: 50%;
+	height: 26px;
+	width: 26px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1.5em;
+	margin-right: 0.5em;
+}
+
+.check-activo {
+	color: $background-principal;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 0.8em;
+	i.material-icons {
+	font-size: 26px;
+	font-size: 1.625rem;
+	}
+}
+
+md-checkbox.md-default-theme.md-checked .md-ink-ripple, md-checkbox.md-checked .md-ink-ripple {
+    color: #336a9b;
+}
+
+md-checkbox{
+	margin-top: 0.375em;
+	margin-bottom: 0;
+ }
+ md-checkbox.md-checked ._md-icon {
+	background-color: rgb(78, 132, 180);
+ }
+
+
+
+// radiobuttons
+
+ .input--radiobutton{
+	  margin-top: 41px;
+	 .radiobutton--label{
+		 color: #5babbf !important;
+		 font-size: 0.75em;
+		 margin-bottom: 38px;
+
+	 }
+ }
+
+md-radio-button{
+	 box-sizing: border-box;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline;
+  position: relative;
+  margin-right: 20px;
+	._md-on {
+	    background-color: #4E84B4;
+	}
+}
+md-radio-button:not([disabled]).md-primary ._md-on {
+  background-color: #4E84B4;
+}
+
+md-radio-button.md-default-theme.md-checked ._md-off, md-radio-button.md-checked ._md-off {
+	border-color: #4E84B4;
+}
+
+
+
+// botones de pago
+
+.botonesdePago--boton{
+	 width: 100%;
+    display: inline-block;
+    height: 20px;
+	.botonesdePago--boton__icono{
+		padding: 0 6em 4em 1em;
+
+	}
+}
+/*nuevos esttilos banchilepay jorge */
+.caja--subtitulo{
+  height: 55px;
+  margin: 1.25em 0em;
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px solid #CCD1D9;
+    .subtitulo-formularios {
+        color: #536374;
+        line-height: 1.5em;
+        padding-top: 0.7em;
+        @include font-20;
+    }
+    .subtitulo--padding{
+      margin: 0;
+      padding: 0.188em 0em;
+    }
+    .subtitulo--boton{
+      float: right;
+      margin: 0.313em 0em;
+      vertical-align: middle;
+    }
+}
+
+@media (max-width:767px){
+	.titulo{
+			@include font-30;
+	}
+}

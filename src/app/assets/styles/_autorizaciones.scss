@@ -1,0 +1,107 @@
+/* ESTILOS INSTRUCCIONES */
+.tabsContenido{
+  padding-top: 1em;
+
+  md-tab-content {
+    padding-top: 0em;
+  }
+  md-tabs-canvas {
+    background-color: #fff;
+    a:focus, a:active {
+      text-decoration: none;
+    }
+  }
+  md-pagination-wrapper {
+    width: 64em !important;
+  }
+  md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
+    height: 0.25em; }
+
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+    text-transform: inherit;
+    color: inherit;
+    padding: 12px 50px 12px 50px;
+    @include font-16;
+  }
+  md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
+    font-weight: bold; }
+  md-tabs .md-tab .md-ripple-container {
+    color: $color-botones;
+  }
+  md-tabs md-ink-bar {
+    background: $color-active;
+    color: $color-active;
+  }
+
+}
+
+.md-button.buscador--boton {
+  color: $color-primario;
+  background-color: rgba(255, 255, 255, 0.96);
+  border-radius: 0em;
+  padding: 0.25em 5em;
+  line-height: 1.875em;
+  min-height: 1.875em;
+  font-weight: 600;
+  margin-bottom: 1.25em;
+}
+
+md-list-item, md-list-item ._md-list-item-inner {
+    max-height: 36px;
+    min-height: 36px;
+}
+
+md-datepicker {
+  padding-bottom: 2.5em;
+  display: list-item;
+}
+.md-button.buscador--boton:not([disabled]) {
+  color: $color-primario;
+  background-color: rgba(255, 255, 255, 0.96) !important;
+}
+.md-datepicker-input {
+  color: $color-primario;
+}
+.md-datepicker-input::-webkit-input-placeholder {
+color: $color-secundario;
+}
+.md-datepicker-input:-moz-placeholder {
+  color: $color-secundario;
+}
+.md-datepicker-input:-ms-input-placeholder {
+  color: $color-secundario;
+}
+.md-calendar-day-header th:first-child {
+  padding-top: 1em;
+}
+.md-icon-button + .md-datepicker-input-container {
+  margin-left: 0.0625em;
+}
+.md-datepicker-input-container {
+  width: 75%;
+}
+.md-datepicker-input-container.md-datepicker-focused {
+	border-bottom-color: $color-active !important;
+}
+
+.md-default-theme .md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-default-theme .md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator {
+    background:  $color-active;
+    color: rgba(255,255,255,0.87);
+    border-color: transparent;
+}
+.md-default-theme .md-calendar-date.md-calendar-date-today .md-calendar-date-selection-indicator, .md-calendar-date.md-calendar-date-today .md-calendar-date-selection-indicator {
+    border: 1px solid $color-active;
+}
+.md-default-theme .md-datepicker-open .md-datepicker-calendar-icon, .md-datepicker-open .md-datepicker-calendar-icon {
+    fill: $color-active;
+}
+
+md-icon.md-default-theme, md-icon {
+    color: rgba(0,0,0,0.54);
+}
+md-icon.md-datepicker-calendar-icon.ng-scope {
+    color: $color-active;
+}
+
+
+/* FIN DE ESTILOS INSTRUCCIONES */

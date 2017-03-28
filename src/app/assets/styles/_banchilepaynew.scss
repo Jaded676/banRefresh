@@ -1,0 +1,93 @@
+.resumen--cuenta{
+  .cuenta--empresa{
+    background: #F0F2F5;
+    padding: 0.8em 1em 0.6em;
+    margin-bottom: 1em;
+    min-height: 60px;
+    .empresa--icono{
+      color: #5BABBF;
+      padding-top: 9px;
+      @include font-36;
+    }
+    .empresa--nombre{
+      line-height: 1.2em;
+      padding-bottom: 0.3em;
+      @include font-14;
+    }
+    .empresa--monto{
+      line-height: 1.2em;
+      text-align: right;
+      padding-bottom: 0.2em;
+    }
+    .empresa--rut{
+      line-height: 1.7em;
+      @include font-12;
+    }
+    .empresa--fecha{
+      text-align: right;
+      @include font-12;
+    }
+  }
+}
+
+
+.formulario{
+    md-input-container {
+      width: 100%;
+  }
+  .formulario--seleccion {
+    padding-top: 1.5em;
+    .seleccion--destino{
+      .destino--comision{
+        line-height: 0.8em;
+        padding-top: 1em;
+        display: inline-block;
+        @include font-12;
+        &.comision--valor{
+          float: right;
+        }
+      }
+      .destino--monto{
+        text-align: right;
+        @include font-22;
+      }
+    }
+  }
+}
+.seleccion--item{
+  padding-bottom: 1em;
+  .item--icon{
+    color: #4E84B4;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.3em;
+    @include font-24;
+    &.icon--actualizacion{
+      color: #7EB645;
+    }
+  }
+  .item--title{
+    display: inline-block;
+    vertical-align: middle;
+    @include font-20;
+  }
+  .item--border {
+    border-bottom: 1px solid #CCD1D9;
+    padding-bottom: 0.5em;
+    padding-top: 1.5em;
+  }
+}
+.hint-select {
+   left: 2px;
+   right: auto;
+   @include font-12;
+   transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+   color: $color-caption;
+   padding-top: 0.125em;
+   font-style: italic;
+ }
+md-input-container .md-errors-spacer{
+  min-height: 0px !important;
+  display: flex;
+  float: inherit;
+}

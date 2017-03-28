@@ -1,0 +1,113 @@
+
+/*gissell*/
+
+.resultEncuesta {
+  .resultEncuesta--titulo {
+    text-align: left;
+    .titulo--icono {
+      padding-top: 1em;
+      i.material-icons {
+        color: #7ED321;
+        @include font-60;
+      }
+    }
+    .titulo--usuario {
+      .usuario--nombre {
+        padding: 0.8em 0;
+        @include font-24;
+      }
+      .usuario--texto {
+        @include font-48;
+      }
+    }
+  }
+  .resultEncuesta--perfil {
+    padding: 0 1em;
+    .perfil--titulo {
+      padding: 1.5em 0;
+      @include font-20;
+    }
+    .perfil--contenido {
+      .contenido--calculado {
+        display: inline-block;
+        vertical-align: top;
+        width: 82%;
+        .calculado--title {
+          padding-bottom: 0.7em;
+          @include font-20;
+        }
+        .calculado--texto {
+          line-height: 20px;
+          color: #519CAD;
+          @include font-14;
+        }
+      }
+    }
+    .perfil--productos {
+      background-color: #F0F2F5;
+      padding: 0.8em;
+      box-sizing: border-box;
+      margin-bottom: 1em;
+      .productos--servicios {
+        padding: 0.3em 0;
+        i.material-icons {
+          padding: 0 0.3em;
+          @include font-16;
+        }
+        .servicios--texto {
+          display: inline-block;
+          vertical-align: top;
+          padding-left: 0.4em;
+          @include font-14;
+        }
+      }
+    }
+  }
+}
+
+.botonAvanzar {
+  margin: 1.1em 0 3em;
+  i.material-icons {
+    @include font-42;
+    color: #336A9B;
+    vertical-align: middle;
+  }
+  .botonAvanzar--back {
+    float: left;
+  }
+  .botonAvanzar--next {
+    float: right;
+  }
+  .informese {
+    padding-top: 1.2em;
+  }
+}
+
+.mensajeActualizarInfo {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  .informacion--atencion {
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    .atencion--icono {
+      float: right;
+      i.material-icons {
+        color: #F69D00;
+        vertical-align: middle;
+        @include font-30;
+      }
+    }
+    p.informacion--atencion__txt {
+      line-height: 3.6em;
+    }
+    md-icon.banicon-atencion.titulo--icono {
+      @include font-22;
+      padding-left: 0.8em;
+    }
+  }
+}
+
+
+/* fin gissell*/

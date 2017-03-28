@@ -1,0 +1,38 @@
+.contenido--background {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 215px;
+  position: absolute;
+      top: 141px;
+  &.consultar-empresa{
+      background-image: url("../images/fondosweb/fondoConsultar-empresa.png");
+  }
+  
+  &.consultar-persona{
+      background-image: url("../images/fondosweb/fondoConsultar-persona.png");
+  }
+
+    &.invertir-empresa{
+      background-image: url("../images/fondosweb/fondoInvertir-empresa.png");
+  }
+
+      &.invertir-persona{
+      background-image: url("../images/fondosweb/fondoInvertir-persona.png");
+  }
+
+    &.definir-persona{
+    background-image: url("../images/fondosweb/fondoDefinir-persona.png");
+  }
+  
+
+      &.definir-empresa{
+    background-image: url("../images/fondosweb/fondoDefinir-empresa.png");
+  }
+
+}
+
+

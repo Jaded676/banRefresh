@@ -1,0 +1,60 @@
+.detalle--descripcion{
+  margin: 1.5em 0 2em 1em;
+  .descripcion--composicion{
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+      background-color: #336A9B;
+      display: inline-block;
+      vertical-align: middle;
+      background-color: #2D8ABB;
+      &.descripcion--composicion__naranja{
+        background-color: #EAA000;
+        margin-left: 2em;
+      }
+  }
+  .descripcion--texto{
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 0.5em;
+  }
+}
+.contenedor--graficosScroll{
+   max-height: 210px;
+    scroll: inherit;
+    overflow: overlay;
+    margin-top: 1em;
+    .ngsb-wrap {
+      padding: 0;
+   }
+   .contenedorScrollme--desktop .patrimonioWidgetBar .patrimonioWidgetBar--contenedorDatos-personas {
+    width: 90%;
+    float: left;
+   }
+   .contenedorScrollme--desktop .patrimonioWidgetBar {
+
+    margin-bottom: 18px;
+}
+   .contenedorScrollme--desktop .patrimonioWidgetBar .patrimonioWidgetBar--progresBar {
+    background-color: #5BABBF !important;
+    height: 2px;
+}
+}
+@media (max-width: 767px) {
+
+  .recomendacion--info{
+  	width: 100%;
+  	box-sizing: border-box;
+  	float: right;
+  	display: table;
+  	border: 1px solid #D5D9E0;
+  	// background: rgb(238,238,238);
+  	padding: 1em 0 1em 0;
+     margin-bottom: 20px;
+  }
+
+}
+
+img.datos--comp {
+              width: 89px;
+          }

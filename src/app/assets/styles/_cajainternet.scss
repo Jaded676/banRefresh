@@ -1,0 +1,81 @@
+.contenedor--cajainternet{
+   .producto--seleccionado {
+   	background-color: #E3E6ED;
+   	padding: 0.8em 0.9em 0.9em 0;
+   	margin-bottom: 0.8em;
+		 @include font-14;
+		 line-height: 1.5em;
+		 padding-bottom: 1em;
+		 width: 100%;
+
+   	.producto--seleccionado__label{
+   		@include font-12;
+   		line-height: 1.5em;
+   		color: $color-active;
+   		padding-top: 7px;
+   		width: 100%;
+         text-align: right;
+   	  }
+   	.md-subhead {
+   	   @include font-16;
+   	   line-height: 1em;
+   		margin-top: 0.4em;
+         text-align: right;
+       }
+      .monto{
+       font-size: 20px;
+       }
+   }
+}
+
+.destino--boton_pago {
+   .pago--label {
+      line-height: 1.5em;
+      color: $color-active;
+      display: block;
+      font-size: 12px; }
+   .pago--boton {
+      width: 150px;
+      text-align: left;
+   .boton--banco {
+     font-size: 20px;
+     padding-bottom: 10px; }
+    }
+  }
+  .informese {
+     text-align: left;
+     display: -webkit-box;
+     display: -moz-box;
+     display: -ms-flexbox;
+     vertical-align: top;
+     margin-top: 1.5em;
+     border: 1px dashed rgb(189,189,189);
+     padding: 1em 0 1em 0;
+     .informese--titulo{
+         margin-bottom:  8px;
+         @include font-14;
+     }
+     .informese--texto {
+         color: #9B9B9B;
+         font-style: italic;
+         padding-left: 0.5em;
+         padding-right: 2em;
+         text-align: justify;
+         font-size: 12px;
+     }
+  }
+
+  .pullRight {
+    display: flex;
+    align-self: flex-end;}
+
+    @media (max-width:767px){
+      .pullRight {
+        display: flex;
+        align-self: flex-start; }
+
+        }
+
+    @media (min-width: 768px) and (max-width: 991px){
+
+          }

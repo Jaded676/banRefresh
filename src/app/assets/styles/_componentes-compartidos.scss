@@ -1,0 +1,887 @@
+/********                   COMPONENTE                *****************/
+/********                  cardSeleccion             *****************/
+.cardSeleccion {
+    background-color: white;
+    border-radius: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    // margin: 0 0 2em 0;
+    position: relative;
+    width: 100%;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.14);
+}
+.seleccionContenido {
+    border-bottom: 1px solid #CCD1D9 !important;
+    margin-top: 0.5em;
+    .seleccionContenido--selector {
+        display: inline-flex;
+        line-height: 1em;
+        margin: 8px 0;
+        width: 100%;
+        @include font-16;
+        .icono--seccion {
+            color: #5BABBF;
+            @include font-30;
+        }
+        .md-ink-ripple ._md-text span.selectEmpresa {
+            @include lato-bold;
+        }
+        .seleccionContenido--selector__label {
+            color: #5BABBF;
+            display: block;
+            font-size: 16px;
+            font-size: 1rem;
+            min-width: 75px;
+            padding-top: 8px;
+        }
+    }
+    span.selectEmpresa {
+        margin-left: 30px;
+    }
+    md-select {
+        &:not([disabled]):focus ._md-select-value {
+            border-bottom-color: #FFF;
+        }
+        ._md-select-value {
+            border-bottom-color: transparent;
+        }
+    }
+}
+
+@media (max-width:515px) {
+    span.selectEmpresa {
+        margin-left: 0px !important;
+        display: block;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    md-select-menu>md-content>md-optgroup>md-option>div._md-text span.selectEmpresa {
+        float: none;
+    }
+    ._md-select-menu-container md-option {
+        height: 71px;
+    }
+}
+
+@media (max-width:320px) {
+    .seleccionContenido--Select {
+        font-size: 13px;
+    }
+}
+
+
+/********                   COMPONENTE                *****************/
+/********                  cardContenedor             *****************/
+
+.cardContenedor {
+    background-color: rgb(255, 255, 255);
+    border-radius: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 1em;
+    padding: 0 1.5em 1.5em;
+    width: 99.5%;
+    position: relative;
+}
+
+
+
+
+
+/********                    COMPONENTE                *****************/
+/********                  subTitulosSeccion           *****************/
+
+
+
+/**********                   COMPONENTE                *****************/
+/**********                seleccionPeriodo             *****************/
+
+.seleccionPeriodo {
+    position: relative;
+    z-index: 10;
+    .seleccionPeriodo--titulo {
+        @include font-18;
+        margin-top: 10px;
+    }
+    .seleccionPeriodo--saldos {
+        display: inline-block;
+        font-weight: 700 !important;
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+        width: 120px;
+        @include font-14;
+        span {
+            display: block;
+            @include font-12;
+            @include lato-light;
+        }
+    }
+    .seleccionPeriodo--icon {
+        color: $color-active;
+        @include font-30;
+    }
+}
+
+
+/**********                   COMPONENTE                *****************/
+/**********                  cardBuscador               *****************/
+
+.cardBuscador {
+    z-index: 9;
+    background-color: #FFFFFF;
+    padding: 1.25em 0em 1em 0em;
+    opacity: 1;
+    padding: 1.5rem!important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+    -webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.24);
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.24);
+    position: relative;
+
+}
+
+
+/**********                   COMPONENTE                *****************/
+/**********                 buscadorPeriodo             *****************/
+
+.buscadorPeriodo--titulo {
+    padding-bottom: 1.5em;
+    padding-top: 0.5em;
+    @include font-24;
+}
+
+
+/**********                   COMPONENTE                *****************/
+/**********                  infoCartola                *****************/
+
+.infoCartola {
+    border-top: 1px dashed #cbd0d9;
+    display: block;
+    height: 20px;
+    font-weight: bold;
+    margin: 2rem 0 1rem 0;
+    padding: 1.5rem 0;
+    @include font-14;
+    i {
+        margin-right: 5px;
+        position: relative;
+        top: 6px;
+    }
+    span {
+        color: $color-caption;
+        font-style: italic;
+        font-weight: normal;
+        margin-left: 1rem;
+    }
+}
+
+
+/**********                   COMPONENTE                *****************/
+/**********               contenedorDocumentos          *****************/
+
+.contenedorDocumentos {
+    border: 1px solid #cbd0d9;
+    box-sizing: border-box;
+    height: 100px;
+    padding: 1rem;
+    margin: 2rem auto 0 auto;
+    display: inline-flex;
+    width: 100%;
+    .contenedorDocumentos--icon {
+        color: $color-active;
+        margin-right: 1em;
+    }
+    .contenedorDocumentos--info {
+        width: 60%;
+        .info__titulo {
+            @include font-16;
+            color: $color-active;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .info__periodo,
+        .info__publicacion {
+            @include font-14;
+        }
+    }
+    .contenedorDocumentos--download {
+        width: 40%;
+        .download--icon {
+            border: 1px solid #cbd0d9;
+            border-radius: 50%;
+            height: 60px;
+            text-align: center;
+            width: 60px;
+            -webkit-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+            float: right;
+            i {
+                color: #cbd0d9;
+                font-size: 38px;
+                line-height: 70px;
+                -webkit-transition: all 0.3s ease-out;
+                -moz-transition: all 0.3s ease-out;
+                transition: all 0.3s ease-out;
+            }
+        }
+        .download--icon:hover {
+            border: 1px solid $color-active;
+            i {
+                color: $color-active;
+                line-height: 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedorDocumentos {
+        height: 100px;
+        .contenedorDocumentos--info {
+            .info__titulo {
+                @include font-16;
+            }
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .contenedorDocumentos {
+        .contenedorDocumentos--info {
+            width: 70%!important;
+            .info__titulo {
+                font-size: 15px !important;
+            }
+        }
+        .contenedorDocumentos--download {
+            width: 30% !important;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .contenedorDocumentos {
+        width: 93%;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedorDocumentos {
+        width: 90%;
+    }
+    .contenedorDocumentos--info {
+        .info__titulo {
+            @include font-12;
+            color: $color-active;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .contenedorDocumentos {
+        width: 90%;
+        margin-left: 15px;
+    }
+    .contenedorDocumentos--icon {
+        color: $color-active;
+        margin-right: 0.5em;
+    }
+    .contenedorDocumentos--info {
+        width: 70%!important;
+        .info__titulo {
+            font-size: 15px !important;
+        }
+    }
+    .contenedorDocumentos--download {
+        width: 30% !important;
+        .download--icon {
+            height: 60px !important;
+            width: 60px !important;
+            i {
+                color: #cbd0d9 !important;
+                font-size: 38px !important;
+                line-height: 70px !important;
+            }
+        }
+    }
+}
+
+.graficoWidgetPatrimonio {
+    margin-bottom: -100px;
+    .highcharts-container {
+        margin: auto;
+    }
+    .swiper-container {
+        height: 341px !important;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+        bottom: 105px !important;
+    }
+    .swiper-pagination-bullet-active {
+        background: #5BABBF;
+    }
+    .graficoWidgetPatrimonio--slideProducto__textos {
+        text-align: center;
+        position: relative;
+        top: -149px;
+        .nombre,
+        .monto,
+        .fecha {
+            display: block;
+        }
+        span.nombre {
+            @include font-16;
+        }
+        span.monto {
+            @include lato-bold;
+            @include font-24;
+            padding: 20px 0;
+        }
+        span.porcentaje {
+            @include font-20;
+            color: #69B4C5;
+        }
+        span.fecha {
+            color: #B3B5BB;
+            @include font-9;
+        }
+    }
+}
+
+//HELPER PARA PERSONAS BULLETS
+.graficoWidgetPatrimonio__personas .swiper-pagination.swiper-pagination-clickable {
+    bottom: 105px !important;
+    width: 50%;
+    left: 25%;
+}
+
+.graficoWidgetPatrimonio__personas span.swiper-pagination-bullet {
+    margin-left: 8px;
+}
+
+
+// PROGRES BAR EN WIDGET PATRIMONIO (RESUMEN)
+
+
+//VERSION DESKTOP
+.contenedorScrollme--desktop {
+    max-height: 270px;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    .patrimonioWidgetBar {
+        display: inline-table;
+        width: 100%;
+        margin-bottom: 30px;
+        .tituloProgresBar {
+            @include lato-bold;
+            margin-bottom: 9px;
+        }
+        .porcentajeProgresBar {
+            float: left;
+            color: #5BABBF;
+        }
+        .totalProgresBar {
+            float: right;
+        }
+        .contenedorProgresBar {
+            height: 2px;
+            background-color: #E3E3E3;
+            width: 100%;
+            margin-top: 34px;
+        }
+        .patrimonioWidgetBar--contenedorDatos-empresa {
+            width: 100%;
+            float: left;
+        }
+
+         .patrimonioWidgetBar--contenedorDatos-personas {
+            width: 63%;
+            float: left;
+        }
+
+
+        .patrimonioWidgetBar--progresBar {
+            background-color: #5BABBF !important;
+            height: 2px;
+        }
+        .patrimonioWidgetBar--boton {
+            width: 30%;
+            min-width: 0 !important;
+            margin: 14px auto 0 auto !important;
+            /* position: relative; */
+            float: right;
+            text-align: center;
+            display: flex;
+            span {
+                margin: auto;
+            }
+        }
+
+    }
+
+    .ultimo-hijo {
+            margin-bottom: 50px !important;
+
+        }
+}
+ //VERSION MOBILE
+.contenedorScrollme--mobile {
+ margin: auto;
+    height: 100%;
+    padding: 15px;
+    .patrimonioWidgetBar {
+        display: inline-table;
+        width: 100%;
+        margin-bottom: 30px;
+        .tituloProgresBar {
+            @include lato-bold;
+            margin-bottom: 9px;
+        }
+        .porcentajeProgresBar {
+            float: left;
+            color: #5BABBF;
+        }
+        .totalProgresBar {
+            float: right;
+        }
+        .contenedorProgresBar {
+            height: 2px;
+            background-color: #E3E3E3;
+            width: 100%;
+            margin-top: 34px;
+        }
+        .patrimonioWidgetBar--contenedorDatos {
+            width: 63%;
+            float: left;
+        }
+        .patrimonioWidgetBar--progresBar {
+            background-color: #5BABBF !important;
+            height: 2px;
+        }
+        .patrimonioWidgetBar--boton {
+            width: 30%;
+            min-width: 0 !important;
+            margin: 14px auto 0 auto !important;
+            /* position: relative; */
+            float: right;
+            text-align: center;
+            display: flex;
+            span {
+                margin: auto;
+            }
+        }
+
+    }
+}
+
+
+
+
+.ngsb-wrap {
+    padding: 2em;
+}
+
+.swiper-pagination {
+    bottom: 110px !important;
+}
+
+
+/**********                COMPONENTE                *****************/
+/**********         contenidoWidgetAsesorias         *****************/
+
+.contenidoWidgetAsesorias {
+    .contenidoWidgetAsesorias--informe {
+        margin-top: 20px;
+        width: 100%;
+        margin-bottom: 20px;
+        span {
+            font-weight: 600
+        }
+    }
+    g.highcharts-axis.highcharts-yaxis {
+        display: none !important;
+    }
+    g.highcharts-axis.highcharts-xaxis {
+        display: none !important;
+    }
+    .contenidoWidgetAsesorias--imgIcon {
+        float: left;
+        margin-right: 15px;
+    }
+    .contenidoWidgetAsesorias--grafico {
+        margin-top: 25px;
+        margin-left: -5px;
+    }
+    h3.contenidoWidgetAsesorias--tituloRiesgo {
+        float: left;
+        color: #536374;
+        font-size: 18px;
+        font-weight: 600;
+        padding-top: 5px;
+    }
+    h4.contenidoWidgetAsesorias--tituloConsejo {
+        color: #69B4C5;
+        font-size: 16px;
+        font-weight: 600;
+        padding-top: 7px;
+    }
+    p.contenidoWidgetAsesorias--consejo {
+        font-size: 13px;
+        font-weight: 500;
+        text-align: justify;
+        letter-spacing: 0.01px;
+    }
+    button {
+        margin: 2em 0!important;
+    }
+}
+
+// HELPER 100% PARA BOTONES EN WIDGETS RESUMEN
+.ban-boton-3 {
+    padding: 0.5em;
+    font-weight: 600;
+    display: flex;
+    margin: 1em auto 0 auto !important;
+    width: 100%;
+    span {
+        margin: auto;
+    }
+}
+
+
+/**********                COMPONENTE                *****************/
+/**********         contenidoWidgetRecomendacion     *****************/
+
+.contenidoWidgetRecomendacion {
+    margin-bottom: 49px;
+    .contenedorTextos--estrategia {
+        margin-bottom: 30px;
+        margin-top: 10px;
+        h3.contenidoWidgetRecomendacion--estrategia {
+            @include font-14;
+            padding: 0.3em 0;
+        }
+        h3.contenidoWidgetRecomendacion--estrategiaTipo {
+         font-size: 18px;
+    /* font-size: 1.25rem; */
+    padding: 0.5em 0 0.3em 0;
+    line-height: 3px;
+        }
+    }
+    .contenedorVariacion--estrategia {
+        width: 30%;
+        float: left;
+        .variacionPorcentaje {
+            color: #69B4C5;
+            font-size: 26px;
+            padding-bottom: 0.3em;
+        }
+        .variacionIndicador {
+            color: #9B9B9B;
+            font-size: 13px;
+        }
+    }
+    .contenedorValorCuota--estrategia {
+        width: 70%;
+        float: right;
+        text-align: right;
+        .variacionPorcentaje {
+            color: #F69D00;
+            font-size: 26px;
+            padding-bottom: 0.3em;
+        }
+        .variacionIndicador {
+            color: #9B9B9B;
+            font-size: 13px;
+        }
+    }
+    div#swipeWidgetRecomendacion-pagination {
+        width: 50%;
+        left: 25%;
+        padding-top: 10px;
+        .swiper-pagination-bullet {
+            margin-left: 7px;
+            background: #5BABBF;
+        }
+    }
+}
+
+// CLASES COMPLEMENTARIAS PARA PÁGINA RESUMEN-PERSONAS
+
+
+.tooltip--headerFormat{
+    text-align: center;
+    font-weight: 600;
+    display: block;
+}
+
+
+.ban-grafico1{
+    z-index: -9999 !important;
+}
+
+.ban-grafico2{
+    top: -166px !important;
+    z-index: -9999 !important;
+}
+
+.label {
+ z-index: 1!important;
+}
+
+.highcharts-tooltip span {
+    background-color: white;
+    z-index:9999!important;
+}
+
+.tooltip {
+    padding:5px;
+}
+
+
+
+.resumen--bloque__contenido {
+        height: 533px;
+}
+@media screen and (max-width: 991px) {
+    .resumen--bloque__contenido {
+        height: 100%;
+}
+}
+
+
+@media screen and (max-width: 991px) {
+    .inversiones--opciones {
+        margin-bottom: 15px;
+    }
+}
+
+.cajas--imagen.ban-responsive-cajas {
+    height: 100% !important;
+}
+
+.resumen--bloque__titulo h2.subtitulos {
+    margin: auto !important;
+}
+
+//HELPERS PARA SWIPER EN RESUMEN
+.ban-width-100--helper {
+    width: 100%;
+}
+
+.ban-marginBottomCard {
+    margin-bottom: 7em;
+}
+
+.ban-marginCero {
+    margin: 0;
+}
+
+.ban-marginTop {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .ban-marginCero {
+        margin: 2em 0;
+    }
+    .ban-marginTop {
+        margin-top: 8em !important;
+    }
+}
+
+text.highcharts-credits {
+    display: none;
+}
+
+text.highcharts-title>tspan {
+    display: none;
+}
+
+
+
+
+/* MEGA MENU */
+
+
+ .megaMenu {
+   background: white;
+   box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.14);
+   display: none !important;
+   left: 0;
+   min-height: 280px;
+   height: auto;
+   position: absolute !important;
+   text-align: left;
+   width: 100%;
+   z-index: 2;
+   padding: 30px 0;
+   background-repeat: no-repeat;
+   background-position: bottom 53px right 0px;
+   background-size: 290px;
+   &.consultar {
+     background-image: url(../images/menuPrivado-consultar.png);
+   }
+   &.invertir {
+     background-image: url(../images/menuPrivado-invertir.png);
+   }
+   &.asesoria {
+     background-image: url(../images/menuPrivado-asesoria.png);
+   }
+   &.servicios {
+     background-image: url(../images/menuPrivado-servicios.png);
+   }
+   &.definir {
+     background-image: url(../images/menuPrivado-definir.png);
+   }
+   &.asesoria-personalizada{
+     background-image: url(../images/menuPublico-asesoria-personalizada.png);
+   }
+   &.productos-y-servicios{
+     background-image: url(../images/menuPublico-productos-y-servicios.png);
+   }
+
+   &.reputacion-y-respaldo{
+     background-image: url(../images/menuPublico-reputacion-y-respaldo.png);
+   }
+
+   @media all and (max-width: 767px) {
+     background-image: none !important;
+   }
+   h2 {
+     @include font-48;
+     @media all and (max-width: 767px) {
+       display: none;
+     }
+   }
+   ul {
+     display: flex;
+     flex-wrap: wrap;
+     li {
+       border-bottom: 1px solid #CCD1D9;
+       flex: 1 1 40%;
+       height: 45px;
+       &:last-child {
+         max-width: 48%;
+       }
+       @media (max-width: 767px) {
+         flex: 1 1 100%;
+         &:last-child {
+           max-width: 100%;
+         }
+       }
+       @media only screen and (min-width:768px) and (max-width:991px) {
+         &:last-child {
+           max-width: 47%;
+         }
+       }
+       &:nth-child(odd) {
+         margin-right: 30px;
+         @media all and (max-width: 767px) {
+           margin-right: 0;
+         }
+       }
+       .megaMenu--link {
+         width: 100%;
+         text-align: left;
+         text-transform: inherit;
+         padding: 0;
+         margin: 0;
+         line-height: 45px;
+         padding-left: 20px;
+         @include font-14;
+         @include lato-light
+       }
+     }
+   }
+   .megaMenu--mensaje {
+     bottom: 0px;
+     background-color: #F4F3F3;
+     left: 0;
+     width: 100%;
+     position: absolute;
+     @media all and (max-width: 767px) {
+       position: relative;
+       padding: 15px 0;
+       margin-top: 40px;
+     }
+     ul {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       @media all and (max-width: 767px) {
+         position: relative;
+       }
+       li {
+         display: flex;
+         flex-wrap: wrap;
+         text-align: center;
+         p {
+           align-self: center;
+           @media all and (max-width: 767px) {
+             p {
+               margin: auto;
+             }
+           }
+         }
+         &:nth-child(1) {
+           img {
+             width: auto;
+             height: 30px;
+             align-self: center;
+             margin-right: 10px;
+           }
+           @media all and (min-width: 768px) {
+             width: 33.33333333%;
+           }
+           @media all and (max-width: 767px) {
+             display: none;
+           }
+         }
+         &:nth-child(2) {
+           p {
+             color: #69B4C5;
+             flex: 1 1;
+             text-align: left;
+             @include font-16;
+           }
+           img {
+             height: 40px;
+             width: auto;
+             align-self: center;
+             margin-right: 10px;
+           }
+           @media all and (min-width: 768px) {
+             width: 66.66666667%;
+           }
+           @media all and (max-width: 767px) {
+             width: 100%;
+             p,
+             img {
+               display: none;
+             }
+             button {
+               width: 100% !important;
+               margin-left: 0px;
+               margin-left: 0px;
+               margin-right: 0px;
+             }
+           }
+         }
+       }
+     }
+   }
+ }

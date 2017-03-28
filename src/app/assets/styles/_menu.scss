@@ -1,0 +1,444 @@
+/* ESTILOS MENU
+.menu--sticky{
+   height: 100%;
+   margin-top: 0em;
+   width: 100% !important;
+
+   position: relative;
+
+  .menu--favoritos{
+    position: absolute;
+    right: 30px;
+    top: -5em;
+    z-index: 2;
+    -ms-overflow-style:none;
+    md-content{
+      background-color: transparent !important;
+      padding: 0;
+        md-input-container label:not(.md-no-float):not(.md-container-ignore),
+        md-input-container .md-placeholder, .md-select-value *:first-child {
+          color: white;
+        }
+    }
+    .md-button.md-warn.md-fab:not([disabled]):hover{
+      background-color: #69bbd0;
+    }
+    .md-focused{
+      background-color: #5BABBF !important;
+    }
+    md-fab-trigger{
+      display: inline-block;
+    }
+    md-fab-speed-dial.md-left{
+      width: 100%;
+      text-align: right;
+    }
+    md-fab-speed-dial.md-left md-fab-actions {
+      -ms-transform:translateX(0);
+      float: left;
+      padding-bottom: 4px;
+    }
+    .favoritos--icono {
+      color: #5BABBF;
+      right: 6px !important;
+      top: -2px !important;
+    }
+  }
+}
+.menu{
+  height: 100%;
+  margin-top: 67px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+   .menu--header{
+      background-color: $background-principal;
+      margin: 0 auto;
+      padding: 1.875em 0;
+      position: relative;
+      width: 100%;
+      .menu--titulo{
+        color: white;
+        padding-left: 1em;
+        display: inline;
+        @include font-30;
+        @include lato-normal;
+      }
+      .menu--submenu {
+        display: inline;
+        vertical-align: text-top;
+        .submenu--vermas {
+          color: $color-secundario-blanco;
+        }
+      }
+      .input{
+        md-input-container {
+          display: block;
+          margin:0;
+          md-select.md-default-theme ._md-select-value._md-select-placeholder, md-select ._md-select-value._md-select-placeholder{
+            color: #fff;
+            @include font-14;
+          }
+          md-select.md-default-theme ._md-select-value._md-select-placeholder, md-select ._md-select-value._md-select-placeholder {
+            border-bottom-color: #fff;
+          }
+          md-select-value {
+            border-bottom-color: rgba(255,255,255,0.5);
+            color: #FFFFFF;
+          }
+          label:not(.md-no-float):not(.md-container-ignore), md-input-container .md-placeholder, .md-select-value *:first-child {
+            color: $color-botones;
+          }
+        }
+      }
+   }
+ }
+  .menu--navegacion {
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+      background: #336a9b;
+      md-content{
+         background-color: transparent !important;
+         overflow: hidden;
+         padding: 0;
+         -ms-overflow-style:none;
+         .menu--navegacion__contenido{
+            height: auto;
+            padding: 0;
+         }
+      }
+   }
+
+
+para cambiar el color de favorito
+.md-button.md-default-theme.md-warn.md-raised,
+.md-button.md-warn.md-raised,
+.md-button.md-default-theme.md-warn.md-fab,
+.md-button.md-warn.md-fab{
+ background-color: #5BABBF;
+ .favorito--icono {
+    padding: 0 6px;
+    font-size: 2em;
+    margin: 0 6px;
+    line-height: 0;
+ }
+}
+
+estilos para cambiar apariencia de los tab
+md-tabs.md-default-theme md-ink-bar,
+md-tabs md-ink-bar{
+  background:#5BABBF;
+  height: 4px;
+}
+md-tabs.md-default-theme .md-tab,
+md-tabs .md-tab{
+  color :white;
+}
+md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active,
+md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon,
+md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon,
+md-tabs .md-tab.md-focused md-icon{
+  color:white;
+  @include lato-bold;
+}
+Quiero Menu
+.navbar--menu nav{
+    background-color: #336A9B;
+}
+
+
+a._md-nav-button.md-accent.md-button.ng-scope.md-ink-ripple {
+      margin: 0px;
+      &.md-active.md-primary {
+      color: #FFFFFF;
+      text-transform: none;
+      @include font-16;
+      @include lato-bold;
+    }
+      &.md-unselected {
+      color: #FFFFFF;
+      text-transform: none;
+      @include font-16;
+      @include lato-normal;
+      }
+  }
+
+md-nav-bar {
+    &.md-default-theme md-nav-ink-bar, md-nav-ink-bar {
+      background: #5BABBF;
+      height: 4px;
+    }
+  }
+.md-nav-bar{
+    border-width: 0;
+
+}
+.md-button._md-nav-button {
+    padding: 11px 46px;
+}
+
+.md-nav-item:first-of-type {
+    margin-left: 0px;
+}
+md-input-container.cuenta--empresa {
+    width: 100%;
+}
+Sticky menu
+
+#menu--perfil{
+   z-index: 5 !important;
+    transition: all 0.6s ease;
+    left: 0;
+    right: 0;
+    background: #336A9B;
+}
+
+
+
+scrollbar
+
+.menu--navegacion md-content, .navg {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.navbar--menu nav {
+    float: left;
+    padding-top: 0.3em;
+    width: 100%;
+}
+
+.navbar--menu.ng-scope {
+    background-color: #336A9B;
+}
+hide scrollbar
+.invisibar::-webkit-scrollbar {
+    height:0px;
+}
+
+
+seleccion Empresa - Cuenta
+.card--cuenta {
+  .cuenta--left {
+    padding-left: 1.8em;
+  }
+  .select--favoritos {
+    text-align: right;
+    .select--icon {
+      color: #5BABBF;
+      z-index: 2;
+    }
+    .select--button {
+      z-index: 1;
+    }
+  }
+  .cuenta {
+    display: inline-flex;
+    line-height: 1em;
+    margin: 8px 0;
+    width: 100%;
+    @include font-16;
+    .icono--seccion {
+      color: #5BABBF;
+      @include font-30;
+    }
+    .md-ink-ripple ._md-text span.selectEmpresa {
+      @include lato-bold;
+    }
+    .cuenta--label {
+      color: #5BABBF;
+      display: block;
+      font-size: 16px !important;
+      font-size: 1rem !important;
+      min-width: 75px;
+      padding-top: 8px;
+    }
+    .cuenta--etiqueta { Personas
+      color: #5BABBF;
+      display: block;
+      font-size: 16px !important;
+      font-size: 1rem !important;
+      padding-top: 8px;
+      padding-right: 8px;
+    }
+    .cuenta--name {  Personas
+      display: block;
+      font-size: 16px !important;
+      font-size: 1rem !important;
+      padding-top: 8px;
+    }
+    ._md-select-value > span:not(._md-select-icon) ._md-text {
+      color: #536374;
+      display: inline;
+      font-size: 16px !important;
+      font-size: 1rem !important;
+    }
+    md-select {
+      margin: 0;
+      min-width: 190px;
+      span {
+        color: #536374;
+        &._md-select-icon {
+          color: #536374;
+        }
+      }
+    }
+    md-select-menu md-content md-option[selected] {
+      color: #536374;
+    }
+    md-select {
+      &.md-default-theme:not([disabled]):focus ._md-select-value, &:not([disabled]):focus ._md-select-value {
+        color: #536374;
+        border-bottom-color: #536374;
+      }
+    }
+    md-select-menu md-content md-option[selected] {
+      color: #536374;
+    }
+    md-select {
+      &:not([disabled]):focus ._md-select-value {
+        border-bottom-color: #FFF;
+      }
+      ._md-select-value {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+  .favorito {
+    text-align: right;
+    .fav {
+      color: $color-active;
+    }
+  }
+}
+
+md-icon.material-icons i.material-icons.star--icon:hover {
+  background-image: url("../images/ic_star_black_24dp_1x.png");
+  width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+}
+.contenido--background {
+  background-image: url("../images/bg-empresas.png");
+  background-image: url("../images/fondoConsultar-persona.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 215px;
+  position: absolute;
+
+}
+section.menu--perfil {
+    background: $background-principal;
+    margin: 0;
+    padding: 0;
+    height: 34px;
+    .md-button._md-nav-button {
+      padding: 4px 52px;
+      text-transform: inherit;
+      @include font-14;
+    }
+    .md-nav-bar {
+      height: 34px;
+  }
+  a._md-nav-button.md-accent.md-button.ng-scope.md-ink-ripple.md-unselected{
+    @include lato-normal;
+  }
+}
+
+
+
+
+ESTILOS MENU
+.ban-sticky{
+  width: 100% !important;
+  left: 0 !important;
+  height: 49px;
+  .menu--favoritos{
+    top: 7px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .menu--navegacion{
+    -webkit-box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.22);
+    -moz-box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.22)    ;
+    box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.22);
+  }
+}
+.menu--sticky{
+  .menu--favoritos{
+    .md-button{
+      padding: 0;
+        md-icon.favoritos--icono {
+          color: #5BABBF;
+          font-size: 1.5em;
+          padding: 0;
+          margin: 0;
+          line-height: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+
+scrollbar
+.quiero--menu md-content, .navg {
+  overflow-x: scroll;
+  overflow-y: hidden; }
+.navbar--quiero nav {
+  width: 120vw;
+  float: left; }
+.navbar--quiero.ng-scope {
+  background-color: #336A9B; }
+
+hide scrollbar
+.invisibar::-webkit-scrollbar {
+  height: 0px;
+  display: none; }
+}
+
+@media (max-width: 768px) {
+
+  md-fab-speed-dial md-fab-actions {
+    width: 100%;
+  }
+  md-fab-speed-dial.md-left {
+
+    margin-left: auto;
+}
+  .card--cuenta {
+    .cuenta--left {
+      padding-left: 15px;
+    }
+    .select--favoritos {
+      text-align: center;
+    }
+    .cuenta md-select {
+      width: 100%;
+    }
+  }
+  .ban-sticky {
+   top: 65px !important;
+  }
+  .card--cuenta{
+    .favorito {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ban-sticky {
+   top: 65px !important;
+  }
+}
+ */

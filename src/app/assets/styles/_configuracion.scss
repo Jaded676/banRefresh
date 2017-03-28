@@ -1,0 +1,1215 @@
+/*INICIO CONFIGURACION*/
+.configuracion {
+	background-color: #FFFFFF;
+	position: relative;
+	min-height: 400px;
+	overflow: hidden;
+	width: 100%;
+	margin-top: 3.8em;
+	margin-bottom: 3em;
+	padding: 0 0 4em;
+	-webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.14);
+	-moz-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.14);
+	box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.14);
+
+	.configuracion--usuario {
+		@include font-24;
+		padding: 3.5em 0 1em;
+		text-align: center;
+	}
+
+	.configuracion--bienvenido {
+		@include font-44;
+		color: $color-primario;
+		padding: 0 2em;
+		text-align: center;
+		margin-bottom: 1em;
+		line-height: 1.2em;
+		@include lato-light;
+	}
+
+	.configuracion--mensaje {
+		line-height: 1.4em;
+	}
+
+	.configuracion--formulario {
+		padding-top: 3em;
+
+		.check {
+			background-color: #4E84B4;
+			color: #FFF;
+			border-radius: 50%;
+			height: 26px;
+			width: 26px;
+			text-align: center;
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 1.5em;
+			margin-right: 1em;
+		}
+
+		.check--subtitulos {
+			display: inline-block;
+		}
+
+		.check-activo {
+			color: #4E84B4;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 0.8em;
+
+			i.material-icons {
+				@include font-34;
+			}
+		}
+
+		.formulario--input {
+			width: 100%;
+		}
+
+		.formulario--item {
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+
+		.hint {
+			left: 2px;
+			right: auto;
+			bottom: 7px;
+			@include font-12;
+			line-height: 1.16em;
+			transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+			color: $color-caption;
+			padding-top: 0.125em;
+			font-style: italic;
+		}
+
+		.hint-select {
+			position: absolute;
+			left: 2px;
+			right: auto;
+			@include font-12;
+			line-height: 1.16em;
+			transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+			color: $color-caption;
+			padding-top: 0.125em;
+		}
+	}
+
+	.mas--adelante {
+		color: $color-secundario-azul;
+		@include font-14;
+		display: inline-block;
+		vertical-align: top;
+		line-height: 3em;
+	}
+
+	.configuracion--titulo {
+		@include font-18;
+		line-height: 1.3em;
+		padding-top: 0.4em;
+		padding-bottom: 0.5em;
+	}
+
+	.contrato--info {
+		-webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.14);
+		-moz-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.14);
+		box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.14);
+		padding: 2em;
+		margin-bottom: 1em;
+
+		.subtitulos--autorizacion {
+			@include font-20;
+			line-height: 32px;
+			padding-bottom: 20px;
+			display: inline-block;
+		}
+
+		.border--blue {
+			border-bottom: 3px solid $background-principal;
+		}
+
+		.border--bluesoft {
+			border-bottom: 3px solid $color-active;
+		}
+
+		.bordersoft {
+			padding: 0;
+		}
+
+		.contrato--logotipo {
+			text-align: right;
+			padding-bottom: 0.4em;
+
+			.banchile--txt {
+				font-size: 5px;
+				font-size: 0.3125rem;
+			}
+		}
+
+		.contrato--servicios {
+			padding-top: 1em;
+			color: $color-primario;
+			border-bottom: 1px solid #CCD1D9;
+
+			.contrato--content {
+				padding-bottom: 0.8em;
+
+				.contrato--texto {
+					line-height: 1.2em;
+					padding-bottom: 0.6em;
+					@include font-14;
+				}
+
+				.list li {
+					line-height: 1.4em;
+				}
+			}
+
+			.contrato--titulo {
+				padding-bottom: 2em;
+				font-weight: bold;
+				line-height: 1.4em;
+			}
+		}
+
+		.contrato--acepto {
+			color: #3E9BD6;
+			margin-bottom: 0.2em;
+
+			._md-label {
+				padding-top: 0.1em;
+
+				span.ng-scope {
+					text-decoration: underline;
+					font-weight: normal;
+					padding-top: 0.1em;
+				}
+			}
+
+			._md-icon {
+				border-color: #3E9BD6;
+			}
+		}
+
+		.contrato--declaro {
+			@include font-12;
+			font-weight: normal;
+			padding-left: 2.3em;
+			line-height: 0.9em;
+			margin-bottom: 1em;
+		}
+
+		.md-button.boton1 {
+			padding: 0.5em 1em;
+		}
+	}
+
+	.card--contrato {
+		text-align: right;
+
+		i.material-icons {
+			color: $color-primario;
+		}
+	}
+
+	.configuracion--btn {
+		text-align: right;
+	}
+}
+//ver
+.administrador {
+	background-color: #FFF;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	margin-top: 4.8em;
+	text-align: center;
+	padding-bottom: 4em;
+	margin-bottom: 4em;
+
+	.administrador--bienvenido {
+		@include font-24;
+		line-height: 1.5em;
+		color: $color-botones;
+		padding: 3em 0 1em;
+	}
+
+	.administrador--parrafo {
+		@include font-18;
+		line-height: 1.1em;
+		color: $color-primario;
+		padding: 1em 10em;
+	}
+
+	.conf--activ1 {
+		width: 236px;
+		text-align: center;
+		margin: 1em auto 2em;
+	}
+
+	.configuracion--content {
+		padding: 1em;
+		border: 1px solid #CCD1D9;
+		width: 52%;
+		text-align: left;
+		margin: 0 auto;
+		background: transparent;
+		margin-bottom: 2em;
+	}
+
+	.content--titulo {
+		@include font-18;
+		line-height: 1.3em;
+		padding: 0 0 0.6em;
+		color: $color-primario;
+	}
+
+	.content--parrafo {
+		line-height: 1em;
+		padding: 0 0 0.3em;
+		color: $color-primario;
+	}
+
+	.flex {
+		display: flex;
+
+		.icons--conf {
+			@include font-24;
+			padding-top: 0.4em;
+			color: $color-primario;
+		}
+
+		.icons--ir {
+			padding-top: 0.7em;
+			color: $color-primario;
+		}
+	}
+}
+
+.background--configuracion {
+	background-image: url("../images/bg-configuracion.jpg");
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 480px;
+	position: absolute;
+}
+
+.contenido--seccion {
+	.card--parrafo {
+		margin: 3em 0 2.5em;
+	}
+
+	a.boton1.md-raised.primario.md-button.md-ink-ripple {
+		color: #FFF;
+	}
+}
+
+.configuracion--banchilepay {
+	line-height: 1.2em;
+
+	.card--mensaje {
+		background-color: #F8F9FA;
+		padding: 1.5em 2em;
+		margin-top: 1.5em;
+
+		.mensaje--parrafo {
+			padding: 0.5em 0;
+
+			.banchilepay {
+				font-weight: bold;
+			}
+		}
+
+		.mensaje--img {
+			padding-top: 0.7em;
+		}
+	}
+
+	.card {
+		padding-bottom: 4em;
+		overflow: hidden;
+	}
+}
+
+.card--seleccione {
+	.seleccione--parrafo {
+		padding: 2em 0 1em;
+	}
+
+	.selecione--item--cuenta {
+		border: 1px solid #CCD1D9;
+	}
+
+	.selecione--cuenta {
+		padding-left: 1em;
+		margin-bottom: 1.5em;
+		margin-top: 2em;
+		color: $color-botones;
+	}
+
+	.selecione--items {
+		margin-top: 0.4em;
+		text-align: center;
+	}
+
+	.th--selecione {
+		text-align: center;
+		color: $color-primario;
+	}
+
+	.td--selecione {
+		width: 19%;
+		text-align: center;
+		line-height: 1em;
+		color: #9B9B9B;
+	}
+
+	.monto {
+		text-align: right;
+		padding-right: 3em;
+	}
+
+	.table--configuracion {
+		border-collapse: separate;
+		border-spacing: 0.5em;
+	}
+
+	.selecione--icon {
+		text-align: center;
+		padding-top: 0.5em;
+
+		i.material-icons.icon {
+			@include font-30;
+			padding-left: 0.7em;
+			color: $color-primario;
+		}
+	}
+}
+
+.card--editar {
+	.configuracion--titulo {
+		padding-top: 1.5em;
+
+		.editar {
+			display: inline-block;
+			vertical-align: middle;
+			@include font-60;
+			color: $color-active;
+		}
+
+		.editar__parrafo {
+			display: inline-block;
+			vertical-align: middle;
+			@include font-36;
+			line-height: 1.2em;
+			font-family: 'Lato Light';
+			padding-left: 1em;
+		}
+
+		.selecione {
+			background-color: #F0F2F5;
+		}
+	}
+
+	.editar--pref {
+		margin: 1em 0 2em;
+	}
+}
+
+.card--indicador {
+		.configuracion--titulo {
+			padding-top: 10px;
+
+			.editar {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 22px;
+				color: $color-active;
+			}
+
+			.editar__parrafo {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 36px;
+				line-height: 1.2em;
+				font-family: 'Lato Light';
+				padding-left: 1em;
+			}
+
+			.selecione {
+				background-color: #F0F2F5;
+			}
+		}
+
+	.editar--pref {
+		margin: 1em 0 2em;
+	}
+
+	.select--indicador {
+		width: 700px;
+		height: 200px;
+		margin: 30px auto 0;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	li {
+		width: 114px;
+		display: inline;
+	}
+
+	.caja--indicador {
+		width: 114px;
+		height: 200px;
+		background: #ffffff;
+		float: left;
+		margin-right: 20px;
+		-webkit-box-shadow: 0 2px 2px 1px rgba(0,0,0,0.14);
+		-moz-box-shadow: 0 2px 2px 1px rgba(0,0,0,0.14);
+		box-shadow: 0 2px 2px 1px rgba(0,0,0,0.14);
+
+
+		.monedas {
+			padding: 10px 0 0;
+			text-align: center;
+			font-size: 16px;
+		}
+
+		.montos {
+			padding: 35px 0 0;
+			text-align: center;
+			font-size: 16px;
+			font-weight: 500;
+		}
+
+		.grafico-indicador {
+			padding: 10px 0 0;
+		}
+
+		.seleccion--indicador {
+			margin: 20px 0 0;
+			width: 100%;
+			height: 50px;
+			background: #F0F2F5;
+			text-align: center;
+			font-size: 13px;
+
+			p {
+				line-height: 50px;
+			}
+		}
+	}
+}
+
+.configuracion--selecione {
+	background-color: #F0F2F5;
+	padding: 1em 2em 1.5em;
+	margin-top: 2em;
+
+	.editar--parrafo {
+		padding: 0.8em 0;
+		font-weight: bold;
+	}
+
+	.editar--parrafo.elegir {
+		padding-bottom: 2em;
+	}
+
+	.md-button.md-default-theme.md-warn.md-fab:not([disabled]):hover,
+	.md-button.md-default-theme.md-warn.md-raised:not([disabled]):hover,
+	.md-button.md-warn.md-fab:not([disabled]):hover,
+	.md-button.md-warn.md-raised:not([disabled]):hover {
+		background-color: #6bb2c3;
+	}
+
+	i.material-icons.seleccion__icon {
+		color: $color-active;
+	}
+
+	.indicador--img {
+		padding-top: 0.6em;
+		width: 100%;
+	}
+}
+
+.quiero--content-navbar {
+	overflow: hidden;
+	margin-bottom: 2em;
+
+	.formulario--empresa {
+		.subtitulos {
+			vertical-align: middle;
+			display: inline-block;
+		}
+
+		.check {
+			background-color: #4E84B4;
+			color: #FFF;
+			border-radius: 50%;
+			height: 1.625em;
+			width: 1.625em;
+			text-align: center;
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 1.5em;
+			margin-right: 1em;
+		}
+
+		.formulario--item {
+			margin: 2em 0 1em;
+		}
+
+		.formulario--input .hint,
+		.hint-select {
+			left: 2px;
+			right: auto;
+			bottom: 7px;
+			@include font-14;
+			line-height: 1.16em;
+			transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+			color: #9B9B9B;
+			padding-top: 0.125em;
+		}
+
+		.formulario--input {
+			width: 100%;
+		}
+	}
+}
+
+.configuracion--close {
+	text-align: right;
+	padding-top: 1em;
+}
+
+header.header--logo {
+	border: 0;
+	height: 135px;
+	z-index: 9;
+	.logo--header {
+		margin-top: 30px;
+		text-align: center;
+
+		#logo--header {
+			display: inline-block;
+			width: 221px;
+			transition: all 0.7s ease;
+			line-height: 105px;
+			padding-top: 0.8em;
+		}
+	}
+	.header--atras {
+		padding-top: 1.5em;
+	}
+}
+
+.contrato--leer {
+	padding-top: 1em;
+
+	.contrato--terminos {
+		margin: 0 auto 15px;
+		max-height: 0;
+		overflow: hidden;
+
+		.contrato--txt {
+			.contrato--content {
+				padding-bottom: 1.2em;
+
+				.contrato--txt--title {
+					color: #4DA1B8;
+					padding-bottom: 2em;
+					padding-top: 1em;
+				}
+
+				.contrato--txt--texto {
+					color: $color-caption;
+					font-style: italic;
+					line-height: 1.2em;
+					padding-bottom: 0.8em;
+					@include font-14;
+				}
+
+				.contrato--txt--texto2 {
+					color: $color-caption;
+					font-style: italic;
+					line-height: 1.2em;
+					padding-bottom: 0;
+					@include font-14;
+				}
+
+				ul.contrato--txt--texto2.list {
+					padding-left: 2em;
+					list-style-type: circle;
+				}
+			}
+		}
+	}
+}
+
+.more-info {
+	display: none;
+}
+
+.more-info .less,
+.more-info.expand .more {
+	display: none;
+}
+
+.more-info.expand .less {
+	display: inline;
+}
+
+.more-info:focus {
+	outline: none;
+}
+
+i.material-icons.more--icon {
+	vertical-align: middle;
+}
+
+.md-button.disabled {
+	color: rgba(255, 255, 255, 0.96);
+	background-color: #BBBBBB;
+	border-radius: 0;
+	padding: 4px 40px;
+	line-height: 30px;
+	min-height: 30px;
+}
+
+.md-button.boton3 {
+	color: #336A9B;
+	border-radius: 0;
+	padding: 0.27em 2.6em;
+	line-height: 30px;
+	min-height: 30px;
+	background-color: #FFFFFF;
+}
+
+.md-button.boton4 {
+	color: #FFFFFF;
+	border-radius: 0;
+	padding: 0.27em 3.5em;
+	line-height: 30px;
+	min-height: 30px;
+	background-color: $background-principal;
+}
+
+.md-button.md-raised:not([disabled]).boton4:hover {
+	color: FFFFFF;
+	background-color: $background-principal;
+}
+
+.cuenta--favoritos {
+	width: 100%;
+	margin: 0;
+
+	.cuenta--favoritos__empresa {
+		padding-bottom: 0.4em;
+	}
+
+	.icono--seccion {
+		@include font-30;
+		color: $color-active;
+	}
+
+	.md-ink-ripple ._md-text span.selectEmpresa {
+		font-weight: 600;
+	}
+
+	.configuracion--seleccione {
+		border-top: 1px solid #CCD1D9;
+		border-bottom: 1px solid #CCD1D9;
+	}
+
+	.cuenta--label {
+		padding-top: 8px;
+		display: block;
+		min-width: 75px;
+		color: $color-active;
+	}
+
+	._md-select-value > span:not(._md-select-icon) ._md-text {
+		display: inline;
+		color: $color-active;
+	}
+
+	md-select {
+		margin: 0;
+
+		span {
+			color: $color-active;
+		}
+
+		span._md-select-icon {
+			color: $color-primario;
+		}
+	}
+
+	md-select-menu md-content md-option[selected] {
+		color: $color-primario;
+	}
+
+	md-select.md-default-theme:not([disabled]):focus ._md-select-value,
+	md-select:not([disabled]):focus ._md-select-value {
+		border-bottom-color: $color-primario;
+		color: $color-primario;
+	}
+
+	md-select-menu md-content md-option[selected] {
+		color: $color-primario;
+	}
+
+	md-select:not([disabled]):focus ._md-select-value {
+		border-bottom-color: transparent;
+	}
+
+	md-select ._md-select-value {
+		border-bottom-color: transparent;
+	}
+}
+
+md-input-container.cuenta--favoritos:not([md-no-float]) ._md-select-placeholder span:first-child {
+	transition: none;
+	transition: none;
+	-webkit-transform-origin: inherit;
+	transform-origin: inherit;
+}
+
+md-input-container.cuenta--favoritos.md-input-focused:not([md-no-float]) ._md-select-placeholder span:first-child {
+	-webkit-transform: inherit;
+	transform: inherit;
+}
+
+.acceso--favoritos.last__child {
+	border-right: 1px solid #CCD1D9;
+}
+
+.seleccion--checkbox {
+	padding-top: 2em;
+
+	.acceso--favoritos {
+		border-left: 1px solid #CCD1D9;
+		padding: 0 1.3em;
+		min-height: 240px;
+
+		.acceso--favoritos__quiero {
+			font-weight: bold;
+			padding-bottom: 1.5em;
+		}
+
+		md-checkbox {
+			width: 100%;
+			color: $color-active;
+		}
+
+		.favoritos__icon {
+			display: inline-block;
+			vertical-align: middle;
+			padding-left: 0.3em;
+		}
+
+		.favoritos__parrafo {
+			display: inline-block;
+			vertical-align: middle;
+			padding-left: 0.4em;
+			font-weight: bold;
+		}
+
+		md-checkbox.md-default-theme:not([disabled]).md-primary.md-checked ._md-icon,
+		md-checkbox:not([disabled]).md-primary.md-checked ._md-icon {
+			background-color: $color-primario;
+		}
+	}
+}
+
+.seleccion--favoritos {
+	.md-button.md-default-theme.md-warn.md-fab:not([disabled]):hover,
+	.md-button.md-default-theme.md-warn.md-raised:not([disabled]):hover,
+	.md-button.md-warn.md-fab:not([disabled]):hover,
+	.md-button.md-warn.md-raised:not([disabled]):hover {
+		background-color: #6bb2c3;
+	}
+
+	.md-button.favoritos {
+		width: 30px !important;
+		height: 30px !important;
+		height: 30px !important;
+		min-height: 30px;
+		margin: 0.3em;
+
+		md-icon {
+			min-height: none !important;
+			min-width: 20px;
+			@include font-20;
+
+			i.material-icons.seleccion__icon {
+				@include font-20;
+			}
+		}
+	}
+}
+@media screen and (max-width: 1200px) {
+	.card--editar {
+		.configuracion--titulo {
+			.editar__parrafo {
+				@include font-34;
+			}
+		}
+	}
+}
+@media screen and (max-width: 991px) {
+	.card--editar {
+		.configuracion--titulo {
+			.editar__parrafo {
+				@include font-22;
+				font-family: 'Lato';
+			}
+		}
+	}
+
+	.seleccion--favoritos {
+		.md-button.favoritos {
+			margin: 0;
+		}
+	}
+
+	.configuracion--selecione {
+		.indicador--img {
+			padding-top: 1em;
+			width: 100%;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.card--seleccione {
+		.monto {
+			padding-right: 0 !important;
+		}
+
+		.selecione--icon {
+			display: none;
+		}
+
+		.selecione--cuenta {
+			padding-left: 0 !important;
+		}
+	}
+
+	.background--configuracion {
+		display: none;
+	}
+
+	.configuracion {
+		margin-top: 0;
+
+		.configuracion--titulo {
+			padding-left: 1em;
+			padding-right: 1em;
+			text-align: center;
+		}
+
+		.contrato--info {
+			.contrato--logotipo {
+				text-align: left;
+
+				.banchile--txt {
+					padding-left: 10em;
+				}
+			}
+		}
+
+		.configuracion--usuario {
+			padding: 2em 0 1em;
+		}
+
+		.configuracion--bienvenido {
+			@include font-30;
+			line-height: 1.3em;
+			padding: 0 0.5em;
+		}
+
+		.configuracion--adelante {
+			text-align: center;
+			padding-bottom: 1em;
+		}
+
+		.formulario--item {
+			margin-bottom: 0;
+		}
+	}
+
+	.padding--login {
+		padding: 0;
+	}
+
+	.configuracion--selecione {
+		padding: 1em;
+
+		.editar--parrafo {
+			padding: 0.8em 0;
+			font-weight: normal;
+		}
+	}
+
+	.card--editar {
+		.configuracion--titulo {
+			padding-top: 0;
+
+			.editar__parrafo {
+				@include font-22;
+				padding-left: 0.5em;
+			}
+
+			.editar {
+				@include font-44;
+			}
+		}
+	}
+
+	.seleccion--favoritos {
+		button.md-fab.md-raised.md-mini.md-button.md-ink-ripple {}
+	}
+
+	.seleccion--checkbox .acceso--favoritos {
+		border-left: none;
+		padding-left: 0.5em;
+		padding-bottom: 0.8em;
+		min-height: inherit;
+	}
+
+	.acceso--favoritos.last__child {
+		border-right: none;
+	}
+}
+@media screen and (max-width: 480px) {
+	.configuracion--selecione {
+		padding: 0.8em;
+
+		.editar--parrafo {
+			padding: 0.8em 0;
+			font-weight: normal;
+		}
+
+		.indicador--img {
+			padding-top: 1.5em;
+			width: 100%;
+		}
+	}
+
+	.card--editar {
+		.configuracion--titulo {
+			padding-top: 0;
+
+			.editar__parrafo {
+				@include font-20;
+				padding-left: 0.5em;
+			}
+
+			.editar {
+				@include font-36;
+			}
+		}
+	}
+
+	.seleccion--checkbox .acceso--favoritos {
+		border-left: none;
+		padding-left: 0.5em;
+		padding-bottom: 0.8em;
+		min-height: inherit;
+	}
+
+	.acceso--favoritos.last__child {
+		border-right: none;
+	}
+}
+.configuracion_contrato {
+	margin-bottom: 3em;
+	margin-top: 3.8em;
+	min-height: 400px;
+	overflow: hidden;
+	padding: 0 0 4em;
+	position: relative;
+	width: 100%;
+
+	.configuracion--usuario {
+		font-size: 24px;
+		margin: 0 auto;
+		padding: 3.5em 0 1em;
+		text-align: center;
+		width: 60%;
+	}
+
+	.configuracion--bienvenido {
+		color: $color-primario;
+		font-size: 48px;
+		line-height: 1.2em;
+		margin: 0 auto;
+		padding: 0 2em 0.5em;
+		text-align: center;
+		width: 50%;
+		@include lato-light;
+	}
+
+	.contrato--acepto {
+		color: #3E9BD6;
+		margin: 20px 0;
+		@include font-18;
+
+		._md-label {
+			padding-top: 0.1em;
+
+			span.ng-scope {
+				font-weight: normal;
+				padding-top: 0.1em;
+				text-decoration: underline;
+			}
+		}
+
+		._md-icon {
+			border-color: #3E9BD6;
+		}
+	}
+	.configuracion--txt{
+		@include font-18;
+	}
+}
+
+.contrato--pdf {
+	height: 1000px;
+	margin: 1em 0 0;
+	width: 100%;
+}
+
+.terminos--condiciones {
+	margin: 30px 0 !important;
+
+	.terminos--boton {
+		float: left;
+		height: 50px;
+		line-height: 50px;
+		margin: 0;
+		padding: 2px 0 0;
+		width: 70%;
+	}
+
+	.icono--pdf1 {
+		float: right;
+		float: right;
+		margin: 0;
+		padding: 12px 0 0 10px;
+		vertical-align: sub;
+	}
+
+	.icono--pdf2 {
+		float: right;
+		float: right;
+		margin: 0;
+		padding: 12px 0 0 10px;
+		vertical-align: sub;
+	}
+
+	.md-button.boton1:not([disabled]) {
+		line-height: 45px;
+		margin: 0;
+	}
+}
+
+.contrato--cerrado {
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: 500;
+	margin: 0;
+	position: relative;
+	padding: 0 20px;
+
+	&:focus {
+		outline: none;
+	}
+
+	.icono--pdf1 {
+		display: block;
+	}
+
+	.icono--pdf2 {
+		display: none;
+	}
+}
+
+.contrato--expandido {
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: 500;
+	margin: 0;
+	padding: 0 20px;
+	position: relative;
+
+	&:focus {
+		outline: none;
+	}
+
+	.icono--pdf1 {
+		display: none;
+	}
+
+	.icono--pdf2 {
+		display: block;
+	}
+}
+
+.slideDown-7 {
+	background: #fff;
+	height: 1100px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	transition: height 0.35s ease;
+
+	&.ng-hide {
+		height: 0;
+		overflow: hidden;
+		position: relative;
+		transition: height 0.35s ease;
+	}
+
+	&.ng-hide-remove {
+		/* remember, the .hg-hide class is added to element
+    when the active class is added causing it to appear
+    as hidden. Therefore set the styling to display=block
+    so that the hide animation is visible */
+		display: block !important;
+	}
+
+	&.ng-hide-add {
+		/* remember, the .hg-hide class is added to element
+    when the active class is added causing it to appear
+    as hidden. Therefore set the styling to display=block
+    so that the hide animation is visible */
+		display: block !important;
+		-webkit-animation-name: hide;
+		animation-name: hide;
+		-webkit-animation-duration: 0.5s;
+		animation-duration: 0.5s;
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+
+	&.ng-hide-remove {
+		-webkit-animation-name: show;
+		animation-name: show;
+		-webkit-animation-duration: 0.5s;
+		animation-duration: 0.5s;
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+	}
+}
+/*FIN CONFIGURACION*/

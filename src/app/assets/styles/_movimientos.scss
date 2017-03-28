@@ -1,0 +1,82 @@
+/* ESTILOS MOVIMIENTOS */
+.bold {
+    font-weight: 600;
+    &:focus {
+      outline: none;
+    }
+}
+.movimientos--bitacora {
+  position: relative;
+  .tabla--ingresado {
+    padding-bottom: 1.25em;
+    padding-top: 0.5em;
+
+  }
+  .tabla--autorizadores {
+    padding-bottom: 1.25em;
+    padding-right: 2.25em;
+    text-align: right;
+    button {
+      margin: 0;
+      vertical-align: middle;
+      i {
+        color: $color-active;
+      }
+    }
+  }
+}
+
+
+  .bitacora-show {
+    opacity: 1;
+  }
+
+  .bitacora-show.ng-hide-add, .bitacora-show.ng-hide-remove {
+    transition: all 0.2s ease-out;
+  }
+
+  .bitacora-show.ng-hide {
+    opacity: 0;
+  }
+
+  md-list-item, md-list-item ._md-list-item-inner {
+      max-height: 2.25em;
+      min-height: 2.25em;
+  }
+
+@media screen and (max-width: 768px) {
+
+  .tabla--autorizadores {
+    text-align: left !important;
+    padding-left: 1.25em !important;
+  }
+  .tabla--ingresado  {
+    padding-left: 1.25em !important;
+  }
+}
+
+/*AGREGAR appearance: MOVIMIENTOS: */
+.buscador--movimientos {
+  margin-top: 1.25em !important;
+}
+
+.buscador--date{
+  margin: 0 0 0 1.25em;
+}
+
+.documentos--info {
+  font-size: 12px;
+  color: #9B9B9B;
+}
+
+.icono--info {
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+/* FIN DE ESTILOS MOVIMIENTOS */

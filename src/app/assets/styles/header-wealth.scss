@@ -1,0 +1,57 @@
+body.wealth {
+    .headerBanchile {
+        .menuSitios {
+            li {
+                a {
+                    color: white !important;
+                    &.active {
+                        color: #5BABBF !important;
+                        border-top: 3px solid #5BABBF;
+                    }
+                }
+            }
+        }
+        nav {
+            background-color: #D5D9E0;
+            .menuPublico--link {
+                color: white !important;
+            }
+            .menuPublicoMobil {
+                md-icon {
+                    i {
+                        color: white !important;
+                    }
+                }
+            }
+            .menuPublico {
+                .menuPublico--item {
+                    &:hover {
+                        &::after {
+                            border-top: 8px solid #626466 !important;
+                        }
+                    }
+                    .menuPublico--link {
+                        color: white;
+                    }
+                    a.menuPublico--link.md-button.md-ink-ripple {
+                        &.activo-menuPublico {
+                            background-color: #626466 !important;
+                        }
+                    }
+                }
+            }
+            .menuLogin {
+                .menuLogin--despliegue {
+                    md-icon {
+                        i {
+                            color: white;
+                        }
+                    }
+                    p {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

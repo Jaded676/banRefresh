@@ -1,0 +1,442 @@
+/* ESTILOS BANCHILE PAY */
+// .quiero--menu__contenido {
+//     overflow: hidden;
+// }
+
+.canvas_borde{
+   position: absolute;
+    top: -32px;
+    width: 90%;
+    height: 90px;
+  }
+//globos
+/* Opción con svg */
+.globo{
+   background-image: url(../images/globo.svg);
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   box-sizing: border-box;
+   display: inline-block;
+   font-size: 1rem;
+   height: 80px;
+   max-width: 330px;
+   padding: 1em 1em 1em 2em;
+   width: 330px;
+   position: relative;
+}
+
+   .globo--titulo{
+      color: #63B0C4;
+      font-size: 1em;
+      font-weight: normal;
+   }
+
+   .globo--valor{
+      color: #476C7D;
+      font-size:1.3em;
+      margin-top: .5em;
+   }
+
+   .valor--moneda{
+      float: right;
+   }
+
+@media (max-width: 760px) {
+
+   .globo{
+      background-image: url(../images/globo-top.svg);
+      background-position: 0px 0px;
+      height:100px;
+      padding: 2em 1em 1em 1em;
+      position: relative;
+      top: -16px;
+   }
+}
+
+
+/*reecomponer estilos*/
+
+.formulario--item{
+   text-align: left;
+
+      .formulario--caption span{
+        float: right;
+        color: $color-active;
+      }
+      .formulario-montosempresa {
+        background: #F0F2F5;
+        padding: 0em 1em;
+        margin-bottom: 1em;
+        min-height: 72px;
+        .monto--disponible {
+          color: #5BABBF;
+          font-size: 36px;
+          font-size: 2.25rem;
+        }
+        md-input-container {
+          margin: 0;
+          display: block;
+        }
+
+
+        .formulario-resumen {
+            .padding--monto {
+              padding-top: 1.4em;
+          }
+        }
+      }
+ }
+
+ .datos--empresaCuenta{
+   height: auto;
+   min-height: 85px;
+   background: #F0F2F5;
+   margin: 10px 0px;
+   md-input-container{
+    display: inline-block;
+    position: relative;
+    padding: 2px;
+    margin: 10px 0;
+    vertical-align: middle;
+
+   }
+
+   .empresaCuenta--icono{
+     color: $color-active;
+     font-size: 60px;
+     i {
+       color: $color-active;
+       font-size: 35px;
+       line-height: 40px;
+       padding: 0px;
+       margin: 0px;
+     }
+   }
+   .empresaCuenta--origen{
+     color: $color-primario;
+     display: table-cell;
+     height: 60px;
+     vertical-align: middle;
+     @include font-16;
+     @include lato-bold;
+   }
+   .empresaCuenta--tipo{
+     color: $color-primario;
+     display: table-cell;
+     height: 60px;
+     vertical-align: middle;
+     @include font-16;
+     @include lato-bold;
+
+   }
+   .empresaCuenta--rut{
+     color: $color-primario;
+     display: table-cell;
+     height: 20px;
+     vertical-align: bottom;
+     @include font-12;
+     @include lato-normal;
+   }
+   .empresaCuenta--monto{
+     color: $color-primario;
+     height: 60px;
+     float: right;
+     line-height: 45px !important;
+     @include font-16;
+     @include lato-bold;
+   }
+   .empresaCuenta--fecha{
+     color: $color-primario;
+     display: table-cell;
+     float: right;
+     height: 20px;
+     line-height: 20px;
+     vertical-align: bottom;
+     @include font-12;
+     @include lato-normal;
+
+   }
+
+ }
+
+
+
+
+
+ .input--txt_pay{
+   display: inline-block;
+   padding-top: 8px;
+   position: absolute;
+ }
+ .total--pagar_pay{
+   color: $color-active !important;
+   float: right;
+   padding: 7px 0px 0px 0px;
+  @include font-26;
+ }
+
+ .informacion-banpay{
+   float: right;
+   i {
+     color: $color-botones;
+   }
+ }
+ /*reecomponer estilos*/
+
+
+ .sumar--texto {
+   padding-left:1em !important;
+   padding-bottom: 0em;
+   .sumar--pagos{
+     color: $linea-input;
+      @include font-12;
+   }
+   i {
+     @include font-14;
+     margin: 0 0.313em 0 0;
+   }
+ }
+
+ .sumar--beneficiario {
+   margin-left: 0;
+   .otro--beneficiario {
+    display: inline-block;
+    color: rgb(83, 99, 116);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    padding-right: 0.5em;
+    }
+    .mas--icono {
+        font-size: 2.125rem;
+        vertical-align: middle;
+        padding-right: 0.2em;
+        color: $color-active;
+    }
+ }
+ .formulario--footer__bpay {
+   margin-top: 20px;
+   margin-bottom: 20px;
+ }
+
+ .comision--texto {
+    @include font-12;
+    padding-top: 1em;
+    display: inline-block;
+}
+ .comision--valor{
+    @include font-12;
+    display: inline-block;
+    float: right;
+    padding-top: 1em;
+ }
+
+ .total-apagar{
+   /* actualizacion jorge de label banchilepay*/
+   label.total-apagar_monto {
+      @include font-22;
+      overflow: inherit;
+      padding-bottom: 0.1em;
+    }
+
+ }
+
+ .pasos--bpay{
+   background-color: $background-principal;
+   color: $color-secundario-blanco;
+   border-radius: 50%;
+   height: 26px;
+   width: 26px;
+   text-align: center;
+   display: inline-block;
+   vertical-align: middle;
+   line-height: 1.5em !important;
+   margin-right: 0.5em;
+   @include font-16;
+ }
+ .info_montoleft{
+   float: left;
+   margin: 0px 0px 0px 20px;
+ }
+
+ .input--otrobeneficiario {
+    margin-bottom: 1em;
+    border-bottom: 1px solid #e1e1e1;
+    h3.otrobeneficiario--titulo{
+      line-height: 2.7em;
+      float: left;
+      color: $color-caption;
+    }
+    i.material-icons{
+        color: $color-active;
+      }
+    .md-icon-button{
+      float: right;
+    }
+  }
+
+
+  .confirmacion--montosempresa {
+        background: #F0F2F5;
+        padding: 0em 1em 2em 1em;
+        margin-bottom: 1em;
+        min-height: 72px;
+        .montoempresa-label{
+          color: $color-active;
+        }
+
+        md-input-container {
+          margin: 0;
+          display: block;
+        }
+
+      }
+
+  .confirmacion--formulario{
+    padding: 0px;
+    margin: 20px 0px 20px 0px;
+  }
+
+
+
+  @media (max-width:767px){
+    .datos--empresaCuenta{
+      min-height: 175px;
+      .empresaCuenta--monto{
+        float: left;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        height: 25px;
+        line-height: 25px !important;
+      }
+      .empresaCuenta--tipo{
+        height: 50px;
+        display: table-cell;
+        vertical-align: bottom;
+      }
+      .empresaCuenta--origen{
+        height: 40px;
+      }
+
+
+      .empresaCuenta--fecha{
+        float: left;
+        @include font-12;
+        @include lato-normal;
+        line-height: 15px !important;
+      }
+      .empresaCuenta--caja{
+        height: 60px;
+        padding: 0px;
+        margin: 0.313em 0em 0em 0.625em;
+      }
+    }
+    .caja--subtitulo{
+      height: 100px;
+        .subtitulo--boton{
+          float: left !important;
+        }
+        .subtitulo--padding{
+          margin: 0;
+          padding: 0;
+        }
+    }
+    .informacion-banpay{
+      float: right !important;
+      left: 24px !important;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px){
+    .datos--empresaCuenta{
+      min-height: 175px;
+      .empresaCuenta--origen{
+        height: 40px;
+      }
+      .empresaCuenta--tipo{
+        height: 50px;
+        display: table-cell;
+        vertical-align: bottom;
+
+      }
+
+      .empresaCuenta--monto{
+        float: left;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        height: 25px;
+        line-height: 25px !important;
+      }
+
+      .empresaCuenta--fecha{
+        float: left;
+        line-height: 25px !important;
+        height: 25px;
+      }
+      .empresaCuenta--caja{
+        height: 3.125em;
+        padding: 0px;
+        margin: 0.313em 0em 0em 0.625em;
+      }
+    }
+    .informacion-banpay{
+      float: left !important;
+    }
+
+  }
+    @media (min-width: 992px) and (max-width: 1199px){
+      .datos--empresaCuenta{
+        .empresaCuenta--icono{
+          color: $color-active;
+          font-size: 60px;
+          i {
+            color: $color-active;
+            font-size: 30px;
+            line-height: 40px;
+            padding: 0px;
+            margin: 0px;
+          }
+        }
+        .empresaCuenta--origen{
+          @include font-14;
+        }
+        .empresaCuenta--tipo{
+          color: $color-primario;
+          display: table-cell;
+          height: 60px;
+          vertical-align: middle;
+          @include font-16;
+          @include lato-bold;
+
+        }
+        .empresaCuenta--rut{
+          @include font-12;
+        }
+        .empresaCuenta--monto{
+          @include font-12;
+        }
+        .empresaCuenta--fecha{
+          color: $color-primario;
+          display: table-cell;
+          float: right;
+          height: 20px;
+          line-height: 20px;
+          vertical-align: bottom;
+          @include font-12;
+          @include lato-normal;
+        }
+      }
+      .quitar--fecha{
+        display: none !important;
+      }
+
+    }
+
+
+
+
+
+
+/* FIN DE ESTILOS BANCHILE PAY */

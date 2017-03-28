@@ -1,0 +1,149 @@
+/* ESTILOS DOCUMENTOS */
+.documentos{
+  padding-top: 0em;
+
+  md-tab-content {
+    padding-top: 0em;
+  }
+  md-tabs-canvas {
+    background-color: #fff;
+    a:focus, a:active {
+      text-decoration: none;
+    }
+    }
+  md-pagination-wrapper {
+    width: 64em !important;
+  }
+  md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
+    height: 0.25em; }
+
+  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+    text-transform: capitalize;
+    color: inherit;
+    font-size: 1em;
+    padding: 12px 50px 12px 50px;
+  }
+  md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
+    font-weight: bold; }
+  md-tabs .md-tab .md-ripple-container {
+   color: $color-botones;
+  }
+  md-tabs md-ink-bar {
+    background: $color-active;
+    color: $color-active;
+  }
+
+
+  .instrucciones--acciones{
+    background-color: $color-secundario-blanco;
+    padding: 2em 0em 2em 0em;
+    text-align: right;
+  }
+}
+
+
+/***************
+Estilos de los documentos
+ ****************/
+
+.documentos--infoCartola{
+   border-top: 1px dashed #cbd0d9;
+   display: block;
+   height: 20px;
+   font-weight: bold;
+   margin-top: 1rem;
+   padding: 1rem 0;
+   @include font-14;
+
+   i{
+      margin-right: 5px;
+      position: relative;
+      top: 6px;
+   }
+
+   span{
+      color: $color-caption;
+      font-style: italic;
+      font-weight: normal;
+      margin-left: 1rem;
+   }
+}
+
+.documentosCliente{
+   border: 1px solid #cbd0d9;
+   box-sizing: border-box;
+   height: 100px;
+   padding: 1rem;
+   max-width: 100%;
+   margin: 2rem 0 0 0;
+
+   .documentosCliente--icon{
+      color: $color-active;
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      width: 10%;
+   }
+
+   .documentosCliente--info{
+     display: inline-block;
+     vertical-align: middle;
+     width: 60%;
+
+      .caja--titulo{
+         @include font-18;
+         color: $color-active;
+         font-weight: bold;
+         margin-bottom: 15px;
+         line-height: 1em;
+      }
+
+      .caja--periodo{
+         @include font-12;
+         margin-bottom: 5px;
+      }
+
+      .caja--publicacion{
+         @include font-14;
+      }
+   }
+
+   .documentosCliente--download{
+      display: inline-block;
+      vertical-align: middle;
+      width: 25%;
+      .download--icon{
+         border: 1px solid #cbd0d9;
+         border-radius: 50%;
+         height: 70px;
+         text-align: center;
+         width: 70px;
+         -webkit-transition: all 0.3s ease-out;
+         -moz-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+
+         i{
+            color: #cbd0d9;
+            font-size: 48px;
+            line-height: 80px;
+            -webkit-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+               transition: all 0.3s ease-out;
+         }
+      }
+
+      .download--icon:hover{
+         border: 1px solid $color-active;
+         i{
+            color: $color-active;
+            line-height: 60px;
+         }
+      }
+   }
+}
+
+/***************
+FIN estilos de los documentos
+ ****************/
+
+ /* ESTILOS DOCUMENTOS */

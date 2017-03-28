@@ -1,0 +1,145 @@
+/* nuevo ventanas emergentes*/
+.ventana{
+  width: 503px;
+  text-align: center;
+    md-dialog {
+    max-width: 100%;
+    padding: 1.5em;}
+    .ventana--titulo {
+        order: 0;
+        overflow: hidden;
+        text-align: center;
+    }
+    .titulo--icono{
+        text-align: center;
+    }
+    i.material-icons.titulo--icono__lock{
+        color: $background-principal;
+        @include font-30;
+        border: 5px solid $background-principal;
+        border-radius: 50%;
+        padding: 0.2em;
+        margin-top: 0.3em;
+    }
+    i.material-icons.titulo--icono__exito{
+        color: #7EB645;
+        @include font-30;
+        border: 5px solid #7EB645 ;
+        border-radius: 50%;
+        padding: 0.2em;
+        margin-top: 0.3em;
+    }
+    i.material-icons.titulo--icono__alerta{
+        color: #F69D00;
+        @include font-30;
+        border: 5px solid #F69D00 ;
+        border-radius: 50%;
+        padding: 0.2em;
+        margin-top: 0.3em;
+    }
+    i.material-icons.titulo--icono__error{
+        color: #C11818;
+        @include font-30;
+        border: 5px solid #C11818 ;
+        border-radius: 50%;
+        padding: 0.2em;
+        margin-top: 0.3em;
+    }
+    i.material-icons.titulo--icono__close {
+        color: $color-primario;
+        font-weight: bold;
+    }
+
+    .ventana--titulo h2{
+      color: $color-botones;
+        padding: 1em;
+        @include font-22;
+        font-weight: bold;}
+    .ventana--titulo__exito h2{
+      color: #7EB645;
+      }
+      .ventana--titulo__alerta h2{
+        color: #F69D00;
+        }
+      .ventana--titulo__error h2{
+        color: #C11818;
+        }
+
+    md-dialog-actions.titulo--close {
+        border: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    md-dialog-actions.titulo--close {
+        margin-top: 0;
+        padding: 0.5em 0.03em;
+    }
+    button.titulo--button__close.md-button.md-ink-ripple {
+        margin: 0;
+        padding-right: 0.5625em;
+        &:hover {
+        background: transparent;
+      }
+    }
+    .ventana--input__txt {
+        padding-bottom: 0.5em;
+        color: $color-primario;
+    }
+    .ventana--mensaje__txt {
+        padding-bottom: 0.5em;
+        text-align: center;
+        color: $color-primario;
+        line-height: 24px;
+        span {
+          display: block;
+        }
+    }
+    input.ventana--input__clave {
+        @include font-20;
+        margin-bottom: 0.3em;
+    }
+    md-input-container.ventana--input.md-input-has-placeholder {
+        margin: 0 auto;
+        width: 70%;
+    }
+    button.ventana--button__confirmar.md-button.md-ink-ripple {
+        background-color: $background-principal;
+        color: #FFFFFF;
+        text-transform: capitalize;
+        border-radius: 0;
+        width: 100%;
+        font-weight: bold;
+    }
+    button.ventana--button__cancelar.md-button.md-ink-ripple{
+      text-transform: capitalize;
+      border: 1px solid #336a9b;
+      border-radius: 0;
+      width: 100%;
+      color: $background-principal;
+      font-weight: bold;
+    }
+    md-dialog.emergente.md-content-overflow.md-transition-in {
+      max-width: 100%;
+      max-height: 100%;
+      min-height: 372px;
+    }
+    .confirmar--cancelar {
+      width: 97%;
+    }
+    .confirmar--cancelar__centrar {
+      text-align: center;
+    }
+    .hint-select {
+      left: 2px;
+      right: auto;
+      @include font-14;
+      line-height: 1.16em;
+      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+      color: $linea-input;
+      padding-top: 0.125em;
+      font-style: italic;
+      margin-bottom: 1.5em;
+  }
+}

@@ -1,0 +1,62 @@
+/* ESTILOS BANDEJA ENTRADA */
+
+md-content.md-padding.ng-scope {
+    background: white;
+}
+.bandeja {
+  thead {
+    background-color: $color-botones;
+    color: $color-cabecera;
+
+    md-tabs-canvas {
+        background-color: white;
+
+    }
+  }
+
+}
+.bandeja--row{
+  padding-bottom: 30px;
+}
+.bandeja-resumen {
+  background-color: #F0F2F5;
+  padding: 15px;
+  overflow: hidden;
+  float: left;
+  width: 97%;
+  h3{
+    color: $color-active;
+  }
+}
+.bandeja--caption{
+  line-height: 1.5em;
+  font-size: $font-caption;
+  font-weight: bold;
+  span{
+    float: right;
+    font-weight: normal;
+  }
+}
+
+.bandeja--input{
+   font-size: .875em;
+   padding: 10px;
+}
+
+
+.menu{
+
+   md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
+      color: $color-botones;}
+
+   md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
+      color: $color-active;
+      background: $color-active;
+   }
+}
+
+
+
+
+
+/* ESTILOS BANDEJA ENTRADA*/

@@ -1,0 +1,128 @@
+/* PATRIMONIO*/
+.seleccionPeriodo {
+    position: relative;
+    z-index: 10;
+    .seleccionPeriodo--titulo {
+        @include font-18;
+        margin-top: 10px;
+    }
+    .seleccionPeriodo--saldos {
+        display: inline-block;
+        font-weight: 700 !important;
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+        width: 120px;
+        @include font-14;
+        span {
+            display: block;
+            @include font-12;
+            @include lato-light;
+        }
+    }
+    .seleccionPeriodo--icon {
+        color: $color-active;
+        @include font-30;
+    }
+}
+.buscadorPeriodo--titulo {
+    padding-bottom: 2em;
+    @include font-24;
+}
+.saldos {
+    margin-top: 5px;
+    text-align: right;
+}
+.evolucionPatrimonio{
+	width: 100%;
+	.evolucionPatrimonio--chart{
+		padding-top: 1.5em;
+		overflow: hidden;
+		width: 100%;
+		&.evolucionPatrimonio--chart__referencia{
+			width: 90%;
+			padding-left: 2em;
+		}
+	}
+
+}
+.graficoPatrimonio {
+        margin: 1em 0 2em 0;
+    .graficoPatrimonio--swiper-container {
+        .highcharts-container {
+            margin: auto;
+        }
+        .swiper-container {
+            /*height: 341px !important;*/
+						width: 100%;
+        }
+        .swiper-container-horizontal>.swiper-pagination-bullets {
+            bottom: 0 !important;
+        }
+        .swiper-pagination-bullet-active {
+            background: #5BABBF;
+        }
+    }
+    .swiper-slide-active>.graficoPatrimonio--slideProducto {
+        padding: 0;
+        position: relative;
+    }
+    .graficoPatrimonio--swiperSlide.swiper-slide-active {
+        padding: 0;
+    }
+    .swiper-slide .graficoPatrimonio--slideProducto {
+        padding: 0;
+        /* float: none; */
+    }
+    .graficoPatrimonio--slideProducto__textos {
+        width: 225px;
+        text-align: center;
+        margin: auto !important;
+        position: absolute;;
+        top: 65px;
+        .nombre,
+        .monto,
+        .fecha {
+            display: block;
+        }
+        span.nombre {
+            @include font-16;
+        }
+        span.monto {
+            @include lato-bold;
+            @include font-24;
+            padding: 20px 0;
+        }
+        span.porcentaje {
+            @include font-20;
+            color: #69B4C5;
+        }
+        span.fecha {
+            color: #B3B5BB;
+            @include font-9;
+        }
+        &.slideProductos__left{
+            left: 20px;
+        }
+    }
+}
+
+.graficoWidgetPatrimonio {
+    margin-bottom: -100px;
+    .highcharts-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .swiper-container {
+        height: 341px !important;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+        bottom: 105px !important;
+    }
+    .swiper-pagination-bullet-active {
+        background: #5BABBF;
+    }
+
+}
+
+/* Fin PATRIMONIO 23 */

@@ -1,0 +1,25 @@
+/* ESTILOS FOOTER */
+footer{
+   background-color: #E2E5EA;
+   color: $color-primario;
+   width: 100%;
+   margin-top: 1em;
+}
+
+.footerLight{
+   height: 53px;
+   line-height: 53px;
+   width: 100%;
+
+   .footerLight--icon{
+      display: inline-block;
+      margin-right: 5px;
+      vertical-align: middle;
+      width: 30px;
+   }
+
+   .footerLight--copy{
+      display: inline-block;
+      @include font-12
+   }
+}

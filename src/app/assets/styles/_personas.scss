@@ -1,0 +1,541 @@
+body.personas {
+    /* ESTILOS HEADER */
+    header {
+        .menuSitios {
+            li {
+                a {
+                    color: white !important;
+                    &.active {
+                        color: #5BABBF !important;
+                        border-top: 3px solid #5BABBF;
+                    }
+                }
+            }
+        }
+        nav#navegacionPublica {
+            background-color: #535557;
+            .menuPublico--link {
+                color: white !important;
+            }
+            .menuPublicoMobil {
+                md-icon {
+                    i {
+                        color: white !important;
+                    }
+                }
+            }
+            .menuPublico {
+                .menuPublico--item {
+                    &:hover {
+                        &::after {
+                            border-top: 8px solid #626466 !important;
+                        }
+                    }
+                    .menuPublico--link {
+                        color: white;
+                    }
+                    a.menuPublico--link.md-button.md-ink-ripple {
+                        &.activo-menuPublico {
+                            background-color: #626466 !important;
+                        }
+                    }
+                }
+            }
+            .menuLogin {
+                .menuLogin--despliegue {
+                    md-icon {
+                        i {
+                            color: white;
+                        }
+                    }
+                    p {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    /* FIN ESTILOS HEADER */
+
+
+
+    /* ESTILOS HOME */
+    .home--presentacion {
+        background-image: url('../images/bg-header-personas.jpg');
+    }
+    /* FIN ESTILOS HOME */
+
+
+    /* ESTILOS LOGIN */
+    .background--login {
+        background-image: url(../images/bg-header-personas.jpg);
+    }
+    .login {
+        .titulo--cliente:before {
+            content: 'persona';
+        }
+    }
+    /* FIN ESTILOS LOGIN */
+
+
+    /* ESTILOS PATRIMONIO
+    .distribucion {
+        .card {
+            .card--header {
+                .card--titulo {
+                    padding: 1em 0;
+                }
+            }
+        }
+    }
+    .swiper--titulo {
+        text-align: left;
+        padding-bottom: 2em;
+        padding-left: 3.9em;
+        .titulo--saldo {
+            @include font-24;
+            padding-bottom: 0.5em;
+            display: inline-block;
+        }
+        .titulo--patrimonio {
+            padding-left: 0.7em;
+            display: inline-block;
+        }
+    }
+    .periodo--buscador {
+        display: inline-block;
+    }
+    .card--selecciona md-datepicker {
+        width: 76%;
+        display: inline-block;
+    }
+    td.producto--label__none {
+        text-align: center !important;
+    }
+    .despliegueDetalle {
+        background: #FFF;
+    }
+    .aporte--rescate {
+        padding-top: 1.5em;
+        padding-bottom: 1em;
+    }
+    .aporte--pasos {
+        padding: 0 1em 0.3em;
+        img.aporte--pasos__img {
+            max-width: 100%;
+        }
+    }
+    .solicitud--aporte {
+        padding-top: 2em;
+    }
+    .globo2--valor {
+        line-height: 1.2em;
+    }
+    .globo2 {
+        width: initial;
+        min-height: 75px;
+        &.fondo--seleccionado__globo {
+            margin-top: initial !important;
+            padding-top: 0.6em;
+            padding-left: 2em;
+            &:after {}
+        }
+        &.globo2-solicitud {
+            padding: 0.7em 1rem;
+            .globo2--titulo {
+                display: inline-block;
+            }
+        }
+    }
+    .fondo--seleccionado {
+        background-color: #F8F9FB;
+        padding: 0.8em 0.9em 0.9em 0em;
+    }
+    .formulario--row {
+        line-height: 1em;
+    }
+    .formulario--pasos {
+        .check {
+            @include font-16;
+            line-height: 1.5em;
+        }
+    }
+    md-icon.banicon-ayuda.titulo--icono {
+        @include font-34;
+        color: #687C92;
+    }
+    .informacion--atencion {
+        background-color: #FFF7D0;
+        line-height: 1.5em;
+        padding: 0 1em 1em;
+        margin-top: 1em;
+        p.informacion--atencion__txt {
+            display: inline;
+            line-height: 1.5em;
+            @include font-14;
+        }
+    }
+    .cuotas--comision2 {
+        margin-top: 0.6em;
+    }
+    md-icon.banicon-atencion.titulo--icono,
+    md-icon.banicon-informacion.titulo--icono.icon--confirmacion {
+        display: inline;
+        @include font-36;
+        color: #F69D00;
+    }
+    .formulario-sumarbeneficio {
+        margin-bottom: 1.5em;
+        line-height: 3em;
+        md-input-container.formulario--input {
+            margin: 0;
+        }
+    }
+    .card--titulo--apertura.solicitud--fondomutuo {
+        margin-top: 1em;
+    }
+    .subtitulo--solicitud {
+        line-height: 1.5em;
+        border-bottom: 1px solid #CCD1D9;
+        font-size: 24px;
+        font-size: 1.5rem;
+        color: #536374;
+        font-weight: 300;
+        font-family: 'Lato';
+    }
+    .card--detalle {
+        .formulario--item {
+            &.destino--pago {
+                padding-top: 1em;
+            }
+            .formulario-montosempresa {
+                background-color: #FFFFFF;
+                padding: 0;
+                margin-bottom: 0;
+                .button--detalleaporte {
+                    padding-top: 0.5em;
+                }
+            }
+        }
+    }
+    .collapseTable {
+        &.solicitud--fondom {
+            height: 100%;
+            padding: 1em;
+        }
+    }
+    .formulario-confirmacion {
+        .formulario-confirmacion__condiciones {
+            overflow: auto;
+            height: 129px;
+            line-height: 1.5em;
+            border: 1px solid #CCD1D9;
+            padding: 1em;
+        }
+        .formulario-confirmacion__titulo {
+            padding: 1em 0;
+        }
+    }
+    .sumar--pagos {
+        md-icon.banicon-informacion.titulo--icono {
+            color: #F69D00;
+            min-width: initial;
+            min-height: initial;
+            width: initial;
+            font-size: 27px;
+            vertical-align: text-bottom;
+            padding-bottom: 0.1em;
+        }
+    }
+    .informese__contenido {
+        text-align: justify;
+        margin-top: 1em;
+        margin-bottom: 2em;
+        line-height: 1em;
+    }
+    .despliegueDetalle {
+        position: inherit;
+        overflow: inherit;
+        text-align: inherit !important;
+        -webkit-box-shadow: none;
+        box-shadow: inset none;
+        .fondosMutuo {
+            border: 10px solid #E6EAF0;
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
+        }
+        .caja--titulo,
+        .caja--numero {
+            padding-top: 1.3em;
+            padding-bottom: 0.7em;
+        }
+        .caja--informaciones {
+            .informaciones--titulo {
+                padding-top: 1em;
+            }
+        }
+    }
+    .globo3 {
+        height: 75px;
+        padding: 0.7em 1rem;
+        box-sizing: border-box;
+        border: 1px solid #D5D9E0;
+        background-color: #fff;
+        border-radius: 3px;
+        position: relative;
+        margin-left: 0px;
+        margin-top: -27px;
+    }
+    md-input-container.aporte--checkbox {
+        margin-top: -27px;
+        md-radio-button {
+            display: block;
+            margin-bottom: 1.2em;
+            margin-top: 0.4em;
+            ._md-on {
+                background-color: #4E84B4;
+            }
+        }
+    }
+    .input--rescatar {
+        text-align: right;
+        margin-top: 0.7em !important;
+        font-size: 24px !important;
+        font-size: 1.5rem !important;
+        padding-bottom: 0.3em !important;
+    }
+    input.globo--info {
+        border: none;
+        float: right;
+        font-size: 14px;
+        color: #637281;
+        background: none;
+        text-align: right;
+    }
+    .destino--monto {
+        padding-top: 3.9em;
+    }
+    .destino--rescate {
+        margin-bottom: 1em;
+        md-icon.banicon-informacion.titulo--icono {
+            color: #687C92;
+            font-size: 29px;
+        }
+        md-input-container>md-select {
+            margin-top: 0.9em;
+        }
+        md-radio-group.seleccionar--fondo {
+            margin-left: 1em;
+            md-radio-button {
+                margin-right: 0;
+            }
+        }
+    }
+    .ventana {
+        &.confirmar--aporte {
+            min-width: 1170px;
+        }
+        &.confirmar--rescate {
+            min-width: 1170px;
+            position: absolute;
+            top: 135px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .formulario-sumarbeneficio {
+            line-height: 0.8em;
+            md-input-container.formulario--input {
+                margin-bottom: 1em;
+            }
+        }
+        .solicitud--aporte {
+            .formulario--row {
+                margin-bottom: 1em;
+            }
+        }
+        .formulario--pasos {
+            padding-bottom: 1em;
+        }
+        .aporte--pasos {
+            text-align: center;
+            img.aporte--pasos__img {
+                padding: 0.8em 0 0.3em;
+                width: 90%;
+            }
+        }
+        .fondo--seleccionado {
+            button.boton1.md-raised.primario {
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (max-width: 991px) {
+        .formulario-sumarbeneficio {
+            line-height: 1em;
+            md-input-container.formulario--input {
+                margin-bottom: 1em;
+            }
+        }
+        .solicitud--aporte {
+            .formulario--row {
+                margin-bottom: 1em;
+            }
+        }
+        .fondo--seleccionado {
+            button.boton1.md-raised.primario {
+                width: 100%;
+            }
+        }
+    }
+    .md-dialog-container {
+        overflow: scroll;
+    }
+    FIN ESTILOS PATRIMONIO */
+
+
+
+    /* ESTILOS RESUMEN_PERSONAS
+    .resumen--inversiones {
+        .resumen--bloque {
+            .resumen--bloque__contenido {
+                min-height: 533px;
+            }
+        }
+        .inversiones--opciones {
+            min-height: 65px;
+            &.inversiones--opciones__top {
+                margin-top: 1em;
+            }
+            &.opciones__padding {
+                padding: 1em 1em 0.9em;
+            }
+        }
+    }
+    .contenido--seccion-personas {
+        position: relative;
+        margin: 0px 0px 0px 0px !important;
+    }
+    .resumen--indicadores {
+        border-bottom: solid 1px #C6D0DB;
+        background-color: #FFFFFF;
+        padding: 0.5em 0em 0.5em 0em !important;
+        color: $color-primario;
+        @include font-14;
+        .indicadores--lista {
+            border-right: 1px solid #C6D0DB;
+            padding: 0 0.5em;
+            float: left;
+            width: 100%;
+            &.indicadores--lista__last {
+                border-right: none;
+            }
+            .indicadores--bloque {
+                width: 95%
+            }
+            .indicador--dato {
+                float: left;
+                width: 77%;
+                text-align: left;
+                line-height: 1.5em;
+            }
+            .indicador--principal {
+                float: left;
+                width: 100%;
+                text-align: left;
+                line-height: 1.5em;
+            }
+            .indicador--grafico {
+                float: left;
+                width: 20%;
+                img {
+                    max-width: 40px
+                }
+            }
+        }
+        .indicador--unique {
+            display: block;
+        }
+        .indicador--unique__up {
+            padding-right: 0.625em;
+            float: right;
+        }
+        .indicador--unique__up:after {
+            content: '\25b2';
+            font-size: 0.75em;
+            padding-left: 0.5em;
+            color: #5EA214;
+        }
+        .indicador--unique__down {
+            padding-right: 0.625em;
+            float: right;
+        }
+        .indicador--unique__down:after {
+            content: '\25bc';
+            font-size: 0.75em;
+            padding-left: 0.5em;
+            color: #E60A00;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        .resumen--inversiones {
+            .resumen--bloque {
+                .resumen--bloque__contenido {
+                    min-height: 200px;
+                    position: inherit;
+                }
+            }
+        }
+    }
+    .banner--publicidad {
+        width: 100%;
+        margin: 0px 0px 0px 0px;
+        img {
+            width: 100%;
+        }
+    }
+    .resumen--informe--personas {
+        width: 100%;
+        padding: 0px 30px;
+        margin: 20px 0px;
+        text-transform: capitalize;
+        text-align: left;
+        color: #9B9B9B !important;
+    }
+    .resumen--texto-informe {
+        font-weight: 400 !important;
+        font-size: 14px;
+    }
+    .bloque--titulo__vermas {
+        padding: 0;
+        margin: 0;
+        min-width: 5%;
+        i.material-icons {
+            color: #F69D00 !important;
+        }
+    }
+    .informes {
+        @include font-14;
+        // line-height: 2em; personas
+        line-height: 15px;
+        font-weight: 500;
+        color: #818A94;
+        padding: 0px 0px 0px 0px;
+        margin: 10px 0px 10px 0px;
+    }
+    .resumen--informe__bottom {
+        .md-button.boton--ver {
+            color: $color-secundario-azul;
+            background-color: #FFFFFF;
+            font-weight: bold;
+            margin: 15px auto 0px auto !important;
+            left: 23%;
+            padding: 0.4em 1.2em;
+            padding: 0.3em 1.4em;
+        }
+    }
+    ESTILOS RESUMEN_PERSONAS */
+
+}
